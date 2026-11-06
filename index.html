@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -16,8 +15,15 @@
   </script>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: Arial, Tahoma, sans-serif;
@@ -176,13 +182,15 @@
     }
 
     .card h3,
-    .project-card h3 {
+    .project-card h3,
+    .testimonial-card h3 {
       font-size: 22px;
       margin-bottom: 10px;
     }
 
     .card p,
-    .project-card p {
+    .project-card p,
+    .testimonial-card p {
       color: #cbd5e1;
       font-size: 16px;
     }
@@ -209,35 +217,22 @@
       font-size: 13px;
     }
 
-    /* آراء العملاء */
     .testimonials {
       background: #111827;
     }
 
     .testimonial-card {
-      text-align: center;
+      text-align: right;
     }
 
-    .testimonial-icon {
-      font-size: 45px;
-      margin-bottom: 12px;
-    }
-
-    .testimonial-card p {
-      color: #cbd5e1;
-      font-size: 16px;
-      margin-bottom: 18px;
+    .testimonial-card .quote {
+      font-size: 35px;
+      color: #38bdf8;
+      margin-bottom: 10px;
     }
 
     .testimonial-card h3 {
-      color: #38bdf8;
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-
-    .testimonial-card span {
-      color: #94a3b8;
-      font-size: 14px;
+      color: #fff;
     }
 
     .contact-buttons {
@@ -298,6 +293,31 @@
       color: #7dd3fc;
     }
 
+    /* زر العودة إلى الأعلى */
+    #back-to-top {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      background: #38bdf8;
+      color: #07111f;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      display: none;
+      z-index: 2000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .35);
+      transition: .3s;
+    }
+
+    #back-to-top:hover {
+      transform: translateY(-4px);
+      background: #7dd3fc;
+    }
+
     footer {
       background: #070d18;
       color: #94a3b8;
@@ -343,6 +363,14 @@
       .contact-form {
         padding: 20px;
       }
+
+      #back-to-top {
+        bottom: 18px;
+        left: 18px;
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+      }
     }
   </style>
 </head>
@@ -367,10 +395,13 @@
       <h2>حلول تقنية عصرية</h2>
 
       <p>
-        نحول أفكارك إلى حلول رقمية ومواقع احترافية باستخدام التكنولوجيا الحديثة.
+        نحول أفكارك إلى حلول رقمية ومواقع احترافية
+        باستخدام التكنولوجيا الحديثة.
       </p>
 
-      <a class="button" href="#services">اكتشف خدماتنا</a>
+      <a class="button" href="#services">
+        اكتشف خدماتنا
+      </a>
     </div>
   </header>
 
@@ -396,7 +427,8 @@
         <div class="icon">🌐</div>
         <h3>تطوير المواقع</h3>
         <p>
-          إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز على الهاتف والكمبيوتر.
+          إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز
+          على الهاتف والكمبيوتر.
         </p>
       </div>
 
@@ -404,7 +436,8 @@
         <div class="icon">💻</div>
         <h3>البرمجة</h3>
         <p>
-          تطوير حلول وبرامج رقمية تناسب احتياجات المشاريع والأعمال.
+          تطوير حلول وبرامج رقمية تناسب احتياجات
+          المشاريع والأعمال.
         </p>
       </div>
 
@@ -412,7 +445,8 @@
         <div class="icon">🎨</div>
         <h3>التصميم</h3>
         <p>
-          تصميم واجهات جذابة وسهلة الاستخدام للمشاريع والمواقع الرقمية.
+          تصميم واجهات جذابة وسهلة الاستخدام
+          للمشاريع والمواقع الرقمية.
         </p>
       </div>
 
@@ -420,7 +454,8 @@
         <div class="icon">🚀</div>
         <h3>المشاريع الرقمية</h3>
         <p>
-          تحويل الأفكار إلى مشاريع رقمية قابلة للتطوير والنمو.
+          تحويل الأفكار إلى مشاريع رقمية قابلة
+          للتطوير والنمو.
         </p>
       </div>
 
@@ -439,33 +474,30 @@
       <div class="project-card">
         <div class="project-icon">🌐</div>
         <h3>مشروع موقع إلكتروني</h3>
-
         <p>
-          تصميم وتطوير موقع إلكتروني حديث ومتجاوب مع مختلف الأجهزة.
+          تصميم وتطوير موقع إلكتروني حديث ومتجاوب
+          مع مختلف الأجهزة.
         </p>
-
         <span>قيد التطوير</span>
       </div>
 
       <div class="project-card">
         <div class="project-icon">💻</div>
         <h3>مشروع برمجي</h3>
-
         <p>
-          تطوير حل برمجي يساعد على تحسين وتنظيم الأعمال الرقمية.
+          تطوير حل برمجي يساعد على تحسين وتنظيم
+          الأعمال الرقمية.
         </p>
-
         <span>قيد التطوير</span>
       </div>
 
       <div class="project-card">
         <div class="project-icon">🚀</div>
         <h3>مشروع رقمي</h3>
-
         <p>
-          تحويل فكرة مبتكرة إلى مشروع رقمي قابل للتطوير والنمو.
+          تحويل فكرة مبتكرة إلى مشروع رقمي قابل
+          للتطوير والنمو.
         </p>
-
         <span>قريبًا</span>
       </div>
 
@@ -474,70 +506,65 @@
 
   <!-- آراء العملاء -->
   <section id="testimonials" class="testimonials">
-
     <h2>آراء العملاء</h2>
 
     <p>
-      نحرص دائمًا على تقديم تجربة تقنية مميزة واحترافية.
+      نطمح دائمًا إلى تقديم تجربة رقمية مميزة
+      وبناء علاقات طويلة الأمد مع عملائنا.
     </p>
 
     <div class="testimonials-grid">
 
       <div class="testimonial-card">
-        <div class="testimonial-icon">⭐</div>
-
-        <p>
-          نعمل حاليًا على تطوير خدماتنا، وسنضيف آراء عملائنا الحقيقيين هنا قريبًا.
-        </p>
-
+        <div class="quote">“</div>
         <h3>عميلنا القادم</h3>
-        <span>Taha Technologies</span>
+        <p>
+          نسعى لتقديم حلول تقنية احترافية تساعد
+          العملاء على تحقيق أهدافهم الرقمية.
+        </p>
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-icon">💬</div>
-
-        <p>
-          نسعد بتجارب العملاء وملاحظاتهم، ونسعى دائمًا إلى تحسين خدماتنا الرقمية.
-        </p>
-
+        <div class="quote">“</div>
         <h3>تجربة العميل</h3>
-        <span>قريبًا</span>
+        <p>
+          رضا العميل وجودة العمل هما من أهم
+          أولويات Taha Technologies.
+        </p>
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-icon">🚀</div>
-
-        <p>
-          هدفنا بناء حلول رقمية بسيطة، حديثة، وقابلة للتطوير مع نمو المشروع.
-        </p>
-
+        <div class="quote">“</div>
         <h3>رؤيتنا</h3>
-        <span>Taha Technologies</span>
+        <p>
+          نبني حلولًا رقمية بسيطة وعصرية وقابلة
+          للتطوير مع نمو المشروع.
+        </p>
       </div>
 
     </div>
-
   </section>
 
   <section id="contact" class="contact">
-
     <h2>تواصل معنا</h2>
 
     <p>
-      لديك فكرة أو مشروع؟ اكتب لنا رسالتك وسنعمل على مساعدتك.
+      لديك فكرة أو مشروع؟ اكتب لنا رسالتك
+      وسنعمل على مساعدتك.
     </p>
 
     <form
       id="contact-form"
       class="contact-form"
       action="https://formspree.io/f/mjyydvkw"
-      method="POST">
+      method="POST"
+    >
 
       <input
         type="hidden"
         name="_subject"
-        value="رسالة جديدة من موقع Taha Technologies">
+        value="رسالة جديدة من موقع Taha Technologies"
+      >
 
       <label for="visitor-name">الاسم</label>
 
@@ -547,7 +574,8 @@
         name="name"
         placeholder="اكتب اسمك"
         autocomplete="name"
-        required>
+        required
+      >
 
       <label for="visitor-email">البريد الإلكتروني</label>
 
@@ -557,7 +585,8 @@
         name="email"
         placeholder="example@email.com"
         autocomplete="email"
-        required>
+        required
+      >
 
       <label for="visitor-message">الرسالة</label>
 
@@ -565,20 +594,22 @@
         id="visitor-message"
         name="message"
         placeholder="اكتب رسالتك هنا..."
-        required></textarea>
+        required
+      ></textarea>
 
       <button
         id="submit-button"
         class="button"
-        type="submit">
+        type="submit"
+      >
         إرسال الرسالة
       </button>
 
       <p
         id="form-status"
         role="status"
-        aria-live="polite">
-      </p>
+        aria-live="polite"
+      ></p>
 
     </form>
 
@@ -586,24 +617,35 @@
 
       <a
         class="button"
-        href="mailto:tahac1836@gmail.com">
+        href="mailto:tahac1836@gmail.com"
+      >
         📧 راسلنا عبر البريد
       </a>
 
       <button
         class="button whatsapp-button"
         type="button"
-        onclick="showWhatsAppMessage()">
+        onclick="showWhatsAppMessage()"
+      >
         💬 واتساب
       </button>
 
     </div>
-
   </section>
 
   <footer>
     © 2026 Taha Technologies — جميع الحقوق محفوظة
   </footer>
+
+  <!-- زر العودة إلى الأعلى -->
+  <button
+    id="back-to-top"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    aria-label="العودة إلى الأعلى"
+    title="العودة إلى الأعلى"
+  >
+    ↑
+  </button>
 
   <script>
 
@@ -612,6 +654,22 @@
         "واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com"
       );
     }
+
+    /* زر العودة إلى الأعلى */
+
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", function () {
+
+      if (window.scrollY > 400) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+
+    });
+
+    /* نموذج التواصل */
 
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
@@ -667,4 +725,3 @@
 
 </body>
 </html>
-```
