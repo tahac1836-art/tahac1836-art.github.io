@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>تقنيات طه | Taha Technologies</title>
+  <title>Taha Technologies</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -24,7 +26,6 @@
       line-height: 1.8;
     }
 
-    /* القائمة */
     nav {
       position: sticky;
       top: 0;
@@ -54,7 +55,6 @@
       color: #38bdf8;
     }
 
-    /* الصفحة الرئيسية */
     .hero {
       min-height: 90vh;
       display: flex;
@@ -64,7 +64,11 @@
       padding: 40px 20px;
 
       background:
-        radial-gradient(circle at top, #172554 0%, #0b1220 55%);
+        radial-gradient(
+          circle at top,
+          #172554 0%,
+          #0b1220 55%
+        );
     }
 
     .hero-content {
@@ -97,6 +101,10 @@
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: inherit;
     }
 
     .button:hover {
@@ -104,7 +112,16 @@
       background: #7dd3fc;
     }
 
-    /* الأقسام */
+    .whatsapp-button {
+      background: #22c55e;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .whatsapp-button:hover {
+      background: #4ade80;
+    }
+
     section {
       padding: 90px 8%;
       text-align: center;
@@ -123,12 +140,10 @@
       font-size: 18px;
     }
 
-    /* من نحن */
     .about {
       background: #0f172a;
     }
 
-    /* الخدمات */
     .services {
       background: #111827;
     }
@@ -137,7 +152,8 @@
       max-width: 1100px;
       margin: 45px auto 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
     }
 
@@ -169,16 +185,65 @@
       font-size: 16px;
     }
 
-    /* التواصل */
+    .projects {
+      background: #0b1220;
+    }
+
+    .projects-grid {
+      max-width: 1100px;
+      margin: 45px auto 0;
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #182235;
+      border: 1px solid #263247;
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: #38bdf8;
+    }
+
+    .project-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #cbd5e1;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .project-card span {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: #172554;
+      color: #7dd3fc;
+      font-size: 13px;
+    }
+
     .contact {
       background: #0f172a;
     }
 
-    .contact .button {
+    .contact-buttons {
       margin-top: 30px;
     }
 
-    /* أسفل الموقع */
     footer {
       background: #070d18;
       color: #94a3b8;
@@ -187,8 +252,8 @@
       font-size: 14px;
     }
 
-    /* الهاتف */
     @media (max-width: 700px) {
+
       nav {
         flex-direction: column;
         gap: 12px;
@@ -210,13 +275,26 @@
       section {
         padding: 65px 6%;
       }
+
+      .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .whatsapp-button {
+        margin-right: 0;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
   <!-- القائمة -->
+
   <nav>
 
     <div class="logo">
@@ -224,22 +302,41 @@
     </div>
 
     <div>
-      <a href="#about">من نحن</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#contact">تواصل معنا</a>
+
+      <a href="#about">
+        من نحن
+      </a>
+
+      <a href="#services">
+        خدماتنا
+      </a>
+
+      <a href="#projects">
+        مشاريعنا
+      </a>
+
+      <a href="#contact">
+        تواصل معنا
+      </a>
+
     </div>
 
   </nav>
 
 
   <!-- الصفحة الرئيسية -->
+
   <header class="hero">
 
     <div class="hero-content">
 
-      <h1>طه للتقنيات</h1>
+      <h1>
+        Taha Technologies
+      </h1>
 
-      <h2>حلول تقنية عصرية</h2>
+      <h2>
+        حلول تقنية عصرية
+      </h2>
 
       <p>
         نحول أفكارك إلى حلول رقمية ومواقع احترافية
@@ -256,12 +353,15 @@
 
 
   <!-- من نحن -->
+
   <section id="about" class="about">
 
-    <h2>من نحن</h2>
+    <h2>
+      من نحن
+    </h2>
 
     <p>
-      طه للتقنيات هي منصة تقنية تهدف إلى تقديم
+      Taha Technologies هي منصة تقنية تهدف إلى تقديم
       حلول رقمية حديثة وبسيطة واحترافية للأفراد
       والمشاريع والأعمال.
     </p>
@@ -270,9 +370,12 @@
 
 
   <!-- الخدمات -->
+
   <section id="services" class="services">
 
-    <h2>خدماتنا</h2>
+    <h2>
+      خدماتنا
+    </h2>
 
     <p>
       نقدم مجموعة من الخدمات التقنية لمساعدتك
@@ -282,50 +385,159 @@
     <div class="cards">
 
       <div class="card">
-        <div class="icon">🌐</div>
 
-        <h3>تطوير المواقع</h3>
+        <div class="icon">
+          🌐
+        </div>
+
+        <h3>
+          تطوير المواقع
+        </h3>
 
         <p>
           إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز
           على الهاتف والكمبيوتر.
         </p>
+
       </div>
 
 
       <div class="card">
-        <div class="icon">💻</div>
 
-        <h3>البرمجة</h3>
+        <div class="icon">
+          💻
+        </div>
+
+        <h3>
+          البرمجة
+        </h3>
 
         <p>
           تطوير حلول وبرامج رقمية تناسب احتياجات
           المشاريع والأعمال.
         </p>
+
       </div>
 
 
       <div class="card">
-        <div class="icon">🎨</div>
 
-        <h3>التصميم</h3>
+        <div class="icon">
+          🎨
+        </div>
+
+        <h3>
+          التصميم
+        </h3>
 
         <p>
           تصميم واجهات جذابة وسهلة الاستخدام
           للمشاريع والمواقع الرقمية.
         </p>
+
       </div>
 
 
       <div class="card">
-        <div class="icon">🚀</div>
 
-        <h3>المشاريع الرقمية</h3>
+        <div class="icon">
+          🚀
+        </div>
+
+        <h3>
+          المشاريع الرقمية
+        </h3>
 
         <p>
           تحويل الأفكار إلى مشاريع رقمية قابلة
           للتطوير والنمو.
         </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- المشاريع -->
+
+  <section id="projects" class="projects">
+
+    <h2>
+      مشاريعنا
+    </h2>
+
+    <p>
+      بعض المشاريع والأعمال التي نعمل عليها
+      في Taha Technologies.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          🌐
+        </div>
+
+        <h3>
+          مشروع موقع إلكتروني
+        </h3>
+
+        <p>
+          تصميم وتطوير موقع إلكتروني حديث
+          ومتجاوب مع مختلف الأجهزة.
+        </p>
+
+        <span>
+          قيد التطوير
+        </span>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          💻
+        </div>
+
+        <h3>
+          مشروع برمجي
+        </h3>
+
+        <p>
+          تطوير حل برمجي يساعد على تحسين
+          وتنظيم الأعمال الرقمية.
+        </p>
+
+        <span>
+          قيد التطوير
+        </span>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          🚀
+        </div>
+
+        <h3>
+          مشروع رقمي
+        </h3>
+
+        <p>
+          تحويل فكرة مبتكرة إلى مشروع رقمي
+          قابل للتطوير والنمو.
+        </p>
+
+        <span>
+          قريبًا
+        </span>
+
       </div>
 
     </div>
@@ -334,9 +546,12 @@
 
 
   <!-- التواصل -->
+
   <section id="contact" class="contact">
 
-    <h2>تواصل معنا</h2>
+    <h2>
+      تواصل معنا
+    </h2>
 
     <p>
       لديك فكرة أو مشروع؟
@@ -344,19 +559,53 @@
       إلى واقع رقمي.
     </p>
 
-    <a class="button" href="mailto:tahac1836@gmail.com">
-      راسلنا
-    </a>
+    <div class="contact-buttons">
+
+      <a
+        class="button"
+        href="mailto:tahac1836@gmail.com"
+      >
+        📧 راسلنا عبر البريد
+      </a>
+
+
+      <button
+        class="button whatsapp-button"
+        onclick="showWhatsAppMessage()"
+      >
+        💬 واتساب
+      </button>
+
+    </div>
 
   </section>
 
 
-  <!-- الحقوق -->
+  <!-- أسفل الموقع -->
+
   <footer>
 
-    © 2026 طه للتقنيات — جميع الحقوق محفوظة
+    © 2026 Taha Technologies
+    — جميع الحقوق محفوظة
 
   </footer>
 
+
+  <!-- رسالة واتساب -->
+
+  <script>
+
+    function showWhatsAppMessage() {
+
+      alert(
+        "واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com"
+      );
+
+    }
+
+  </script>
+
+
 </body>
+
 </html>
