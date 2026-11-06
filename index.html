@@ -3,7 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taha Technologies</title>
+
+  <title>Taha Technologies | حلول تقنية عصرية</title>
+
+  <!-- وصف الموقع لمحركات البحث -->
+  <meta name="description" content="Taha Technologies منصة تقنية تقدم حلولًا رقمية عصرية، وتطوير المواقع، والبرمجة، والتصميم، والمشاريع الرقمية.">
+
+  <meta name="keywords" content="Taha Technologies, تطوير المواقع, البرمجة, التصميم, حلول تقنية, مشاريع رقمية">
+
+  <meta name="author" content="Taha Technologies">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1220">
+
+  <!-- رابط الموقع -->
+  <link rel="canonical" href="https://tahac1836-art.github.io/">
+
+  <!-- أيقونة الموقع في تبويب المتصفح -->
+  <link rel="icon" type="image/png" href="شعار طه للتقنيات المبتكرة.png">
+  <link rel="apple-touch-icon" href="شعار طه للتقنيات المبتكرة.png">
+
+  <!-- مشاركة الموقع على مواقع التواصل -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taha Technologies">
+  <meta property="og:description" content="نحول أفكارك إلى حلول رقمية ومواقع احترافية باستخدام التكنولوجيا الحديثة.">
+  <meta property="og:url" content="https://tahac1836-art.github.io/">
+  <meta property="og:image" content="https://tahac1836-art.github.io/%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B7%D9%87%20%D9%84%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D8%A9.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taha Technologies">
+  <meta name="twitter:description" content="حلول تقنية عصرية ومشاريع رقمية احترافية.">
+
+  <!-- بيانات منظمة لمحركات البحث -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Taha Technologies",
+    "url": "https://tahac1836-art.github.io/",
+    "logo": "https://tahac1836-art.github.io/%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B7%D9%87%20%D9%84%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D9%83%D8%B1%D8%A9.png",
+    "email": "tahac1836@gmail.com"
+  }
+  </script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WQ5KBFS93"></script>
@@ -15,6 +55,18 @@
   </script>
 
   <style>
+    :root {
+      --background: #0b1220;
+      --surface: #0f172a;
+      --card: #182235;
+      --border: #263247;
+      --primary: #38bdf8;
+      --primary-light: #7dd3fc;
+      --text: #ffffff;
+      --muted: #cbd5e1;
+      --green: #22c55e;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -23,82 +75,135 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
     body {
       font-family: Arial, Tahoma, sans-serif;
-      background: #0b1220;
-      color: #fff;
+      background: var(--background);
+      color: var(--text);
       line-height: 1.8;
+      overflow-x: hidden;
     }
 
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* إمكانية تجاوز القائمة */
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      right: 15px;
+      background: var(--primary);
+      color: #07111f;
+      padding: 10px 18px;
+      border-radius: 8px;
+      z-index: 3000;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* القائمة العلوية */
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(11, 18, 32, .97);
-      border-bottom: 1px solid #263247;
-      padding: 18px 7%;
+      background: rgba(11, 18, 32, .96);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
     }
 
     .logo img {
-  width: 180px;
-  height: 55px;
-  object-fit: contain;
-  display: block;
-}
-   
+      width: 180px;
+      height: 55px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
     nav a {
       color: #e2e8f0;
       text-decoration: none;
-      margin-right: 25px;
+      padding: 7px 10px;
+      border-radius: 7px;
       transition: .3s;
+      font-size: 15px;
     }
 
-    nav a:hover {
-      color: #38bdf8;
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--primary);
+      background: rgba(56, 189, 248, .08);
     }
 
+    /* الواجهة الرئيسية */
     .hero {
-      min-height: 90vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px 20px;
-      background: radial-gradient(circle at top, #172554 0%, #0b1220 55%);
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at 50% 0%, #172554 0%, transparent 55%),
+        var(--background);
     }
 
     .hero-content {
       max-width: 850px;
+      animation: fadeUp 1s ease both;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 8vw, 80px);
-      color: #38bdf8;
-      margin-bottom: 10px;
+      font-size: clamp(38px, 8vw, 76px);
+      color: var(--primary);
+      margin-bottom: 12px;
+      line-height: 1.3;
     }
 
     .hero h2 {
-      font-size: 30px;
+      font-size: clamp(23px, 4vw, 34px);
       margin-bottom: 20px;
     }
 
     .hero p {
-      color: #cbd5e1;
+      color: var(--muted);
       font-size: 19px;
-      margin-bottom: 35px;
+      margin-bottom: 32px;
     }
 
+    /* الأزرار */
     .button {
       display: inline-block;
-      background: #38bdf8;
+      background: var(--primary);
       color: #07111f;
-      padding: 13px 30px;
+      padding: 12px 27px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
@@ -106,16 +211,24 @@
       border: none;
       cursor: pointer;
       font-size: 16px;
-      font-family: inherit;
     }
 
     .button:hover {
       transform: translateY(-3px);
-      background: #7dd3fc;
+      background: var(--primary-light);
+      box-shadow: 0 8px 22px rgba(56, 189, 248, .18);
+    }
+
+    .button:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--primary-light);
+      outline-offset: 3px;
     }
 
     .whatsapp-button {
-      background: #22c55e;
+      background: var(--green);
       color: white;
       margin-right: 10px;
     }
@@ -124,90 +237,95 @@
       background: #4ade80;
     }
 
+    /* الأقسام */
     section {
-      padding: 90px 8%;
+      padding: 85px 8%;
       text-align: center;
     }
 
     section h2 {
-      color: #38bdf8;
-      font-size: 36px;
-      margin-bottom: 20px;
+      color: var(--primary);
+      font-size: clamp(27px, 4vw, 36px);
+      margin-bottom: 18px;
     }
 
     section > p {
       max-width: 750px;
       margin: auto;
-      color: #cbd5e1;
+      color: var(--muted);
       font-size: 18px;
     }
 
     .about,
     .contact {
-      background: #0f172a;
+      background: var(--surface);
     }
 
-    .services {
+    .services,
+    .testimonials {
       background: #111827;
     }
 
+    .projects {
+      background: var(--background);
+    }
+
+    /* البطاقات */
     .cards,
     .projects-grid,
     .testimonials-grid {
       max-width: 1100px;
-      margin: 45px auto 0;
+      margin: 42px auto 0;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
+      gap: 24px;
     }
 
     .card,
     .project-card,
     .testimonial-card {
-      background: #182235;
-      border: 1px solid #263247;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 15px;
-      padding: 30px 20px;
-      transition: .3s;
+      padding: 28px 20px;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
     }
 
     .card:hover,
     .project-card:hover,
     .testimonial-card:hover {
       transform: translateY(-7px);
-      border-color: #38bdf8;
+      border-color: var(--primary);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
     }
 
     .icon {
-      font-size: 45px;
+      font-size: 43px;
       margin-bottom: 10px;
     }
 
     .card h3,
     .project-card h3,
     .testimonial-card h3 {
-      font-size: 22px;
+      font-size: 21px;
       margin-bottom: 10px;
     }
 
     .card p,
     .project-card p,
     .testimonial-card p {
-      color: #cbd5e1;
+      color: var(--muted);
       font-size: 16px;
     }
 
-    .projects {
-      background: #0b1220;
-    }
-
+    /* المشاريع */
     .project-icon {
-      font-size: 50px;
-      margin-bottom: 15px;
+      font-size: 48px;
+      margin-bottom: 12px;
     }
 
     .project-card p {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .project-card span {
@@ -215,42 +333,33 @@
       padding: 5px 14px;
       border-radius: 20px;
       background: #172554;
-      color: #7dd3fc;
+      color: var(--primary-light);
       font-size: 13px;
     }
 
-    .testimonials {
-      background: #111827;
-    }
-
+    /* آراء العملاء */
     .testimonial-card {
       text-align: right;
     }
 
     .testimonial-card .quote {
-      font-size: 35px;
-      color: #38bdf8;
-      margin-bottom: 10px;
+      font-size: 38px;
+      color: var(--primary);
+      margin-bottom: 8px;
+      line-height: 1;
     }
 
     .testimonial-card h3 {
-      color: #fff;
+      color: var(--primary-light);
     }
 
-    .contact-buttons {
-      margin-top: 30px;
-    }
-
-    .contact-buttons .button {
-      margin-left: 10px;
-    }
-
+    /* نموذج التواصل */
     .contact-form {
       max-width: 650px;
       margin: 35px auto 0;
       padding: 28px;
-      background: #182235;
-      border: 1px solid #263247;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 15px;
       text-align: right;
     }
@@ -268,15 +377,15 @@
       padding: 13px 14px;
       border-radius: 8px;
       border: 1px solid #475569;
-      background: #0b1220;
-      color: #fff;
+      background: var(--background);
+      color: white;
       font: inherit;
       outline: none;
     }
 
     .contact-form input:focus,
     .contact-form textarea:focus {
-      border-color: #38bdf8;
+      border-color: var(--primary);
     }
 
     .contact-form textarea {
@@ -289,10 +398,25 @@
       width: 100%;
     }
 
+    .contact-form button:disabled {
+      opacity: .65;
+      cursor: wait;
+      transform: none;
+    }
+
     #form-status {
       margin-top: 15px;
       text-align: center;
-      color: #7dd3fc;
+      color: var(--primary-light);
+      min-height: 28px;
+    }
+
+    .contact-buttons {
+      margin-top: 28px;
+    }
+
+    .contact-buttons .button {
+      margin-left: 10px;
     }
 
     /* زر العودة إلى الأعلى */
@@ -300,11 +424,11 @@
       position: fixed;
       bottom: 25px;
       left: 25px;
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       border: none;
       border-radius: 50%;
-      background: #38bdf8;
+      background: var(--primary);
       color: #07111f;
       font-size: 24px;
       font-weight: bold;
@@ -317,26 +441,77 @@
 
     #back-to-top:hover {
       transform: translateY(-4px);
-      background: #7dd3fc;
+      background: var(--primary-light);
     }
 
+    /* التذييل */
     footer {
       background: #070d18;
       color: #94a3b8;
       text-align: center;
-      padding: 25px;
+      padding: 25px 15px;
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* تأثيرات الظهور */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    html.js .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* تحسين الهاتف */
+    @media (max-width: 850px) {
       nav {
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
+        padding: 12px 5%;
+      }
+
+      .nav-links {
+        justify-content: center;
       }
 
       nav a {
-        margin: 0 7px;
         font-size: 14px;
+        padding: 5px 7px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo img {
+        width: 155px;
+        height: 48px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
       }
 
       .hero h2 {
@@ -344,11 +519,26 @@
       }
 
       .hero p {
-        font-size: 17px;
+        font-size: 16px;
       }
 
       section {
         padding: 65px 6%;
+      }
+
+      section > p {
+        font-size: 16px;
+      }
+
+      .cards,
+      .projects-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .contact-form {
+        padding: 20px;
       }
 
       .contact-buttons {
@@ -359,19 +549,32 @@
       }
 
       .contact-buttons .button {
-        margin-left: 0;
-      }
-
-      .contact-form {
-        padding: 20px;
+        margin: 0;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
       }
 
       #back-to-top {
         bottom: 18px;
         left: 18px;
-        width: 45px;
-        height: 45px;
+        width: 44px;
+        height: 44px;
         font-size: 21px;
+      }
+    }
+
+    /* احترام إعداد تقليل الحركة في الجهاز */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -379,280 +582,312 @@
 
 <body>
 
-  <nav>
-    <div class="logo">
-  <img src="شعار طه للتقنيات المبتكرة.png" alt="Taha Technologies">
-</div>
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
 
-    <div>
+  <!-- القائمة العلوية -->
+  <nav aria-label="القائمة الرئيسية">
+
+    <a class="logo" href="#top" aria-label="Taha Technologies - الصفحة الرئيسية">
+      <img
+        src="شعار طه للتقنيات المبتكرة.png"
+        alt="شعار Taha Technologies"
+        fetchpriority="high">
+    </a>
+
+    <div class="nav-links">
       <a href="#about">من نحن</a>
       <a href="#services">خدماتنا</a>
       <a href="#projects">مشاريعنا</a>
       <a href="#testimonials">آراء العملاء</a>
       <a href="#contact">تواصل معنا</a>
     </div>
+
   </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Taha Technologies</h1>
-      <h2>حلول تقنية عصرية</h2>
+  <main id="main-content">
+
+    <!-- الواجهة الرئيسية -->
+    <header id="top" class="hero">
+
+      <div class="hero-content">
+
+        <h1>Taha Technologies</h1>
+
+        <h2>حلول تقنية عصرية</h2>
+
+        <p>
+          نحول أفكارك إلى حلول رقمية ومواقع احترافية
+          باستخدام التكنولوجيا الحديثة.
+        </p>
+
+        <a class="button" href="#services">
+          اكتشف خدماتنا
+        </a>
+
+      </div>
+
+    </header>
+
+    <!-- من نحن -->
+    <section id="about" class="about reveal">
+
+      <h2>من نحن</h2>
 
       <p>
-        نحول أفكارك إلى حلول رقمية ومواقع احترافية
-        باستخدام التكنولوجيا الحديثة.
+        Taha Technologies هي منصة تقنية تهدف إلى تقديم حلول رقمية حديثة
+        وبسيطة واحترافية للأفراد والمشاريع والأعمال.
       </p>
 
-      <a class="button" href="#services">
-        اكتشف خدماتنا
-      </a>
-    </div>
-  </header>
+    </section>
 
-  <section id="about" class="about">
-    <h2>من نحن</h2>
+    <!-- الخدمات -->
+    <section id="services" class="services">
 
-    <p>
-      Taha Technologies هي منصة تقنية تهدف إلى تقديم حلول رقمية حديثة
-      وبسيطة واحترافية للأفراد والمشاريع والأعمال.
-    </p>
-  </section>
+      <h2>خدماتنا</h2>
 
-  <section id="services" class="services">
-    <h2>خدماتنا</h2>
+      <p>
+        نقدم مجموعة من الخدمات التقنية لمساعدتك على بناء حضور رقمي قوي.
+      </p>
 
-    <p>
-      نقدم مجموعة من الخدمات التقنية لمساعدتك على بناء حضور رقمي قوي.
-    </p>
+      <div class="cards">
 
-    <div class="cards">
+        <div class="card reveal">
+          <div class="icon">🌐</div>
+          <h3>تطوير المواقع</h3>
+          <p>
+            إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز
+            على الهاتف والكمبيوتر.
+          </p>
+        </div>
 
-      <div class="card">
-        <div class="icon">🌐</div>
-        <h3>تطوير المواقع</h3>
-        <p>
-          إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز
-          على الهاتف والكمبيوتر.
-        </p>
+        <div class="card reveal">
+          <div class="icon">💻</div>
+          <h3>البرمجة</h3>
+          <p>
+            تطوير حلول وبرامج رقمية تناسب احتياجات
+            المشاريع والأعمال.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🎨</div>
+          <h3>التصميم</h3>
+          <p>
+            تصميم واجهات جذابة وسهلة الاستخدام
+            للمشاريع والمواقع الرقمية.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🚀</div>
+          <h3>المشاريع الرقمية</h3>
+          <p>
+            تحويل الأفكار إلى مشاريع رقمية قابلة
+            للتطوير والنمو.
+          </p>
+        </div>
+
       </div>
 
-      <div class="card">
-        <div class="icon">💻</div>
-        <h3>البرمجة</h3>
-        <p>
-          تطوير حلول وبرامج رقمية تناسب احتياجات
-          المشاريع والأعمال.
-        </p>
+    </section>
+
+    <!-- المشاريع -->
+    <section id="projects" class="projects">
+
+      <h2>مشاريعنا</h2>
+
+      <p>
+        بعض المشاريع والأعمال التي نعمل عليها في Taha Technologies.
+      </p>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-icon">🌐</div>
+          <h3>مشروع موقع إلكتروني</h3>
+          <p>
+            تصميم وتطوير موقع إلكتروني حديث ومتجاوب
+            مع مختلف الأجهزة.
+          </p>
+          <span>قيد التطوير</span>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">💻</div>
+          <h3>مشروع برمجي</h3>
+          <p>
+            تطوير حل برمجي يساعد على تحسين وتنظيم
+            الأعمال الرقمية.
+          </p>
+          <span>قيد التطوير</span>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">🚀</div>
+          <h3>مشروع رقمي</h3>
+          <p>
+            تحويل فكرة مبتكرة إلى مشروع رقمي قابل
+            للتطوير والنمو.
+          </p>
+          <span>قريبًا</span>
+        </div>
+
       </div>
 
-      <div class="card">
-        <div class="icon">🎨</div>
-        <h3>التصميم</h3>
-        <p>
-          تصميم واجهات جذابة وسهلة الاستخدام
-          للمشاريع والمواقع الرقمية.
-        </p>
+    </section>
+
+    <!-- آراء العملاء -->
+    <section id="testimonials" class="testimonials">
+
+      <h2>آراء العملاء</h2>
+
+      <p>
+        نطمح دائمًا إلى تقديم تجربة رقمية مميزة
+        وبناء علاقات طويلة الأمد مع عملائنا.
+      </p>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="quote">“</div>
+          <h3>عميلنا القادم</h3>
+          <p>
+            نسعى لتقديم حلول تقنية احترافية تساعد
+            العملاء على تحقيق أهدافهم الرقمية.
+          </p>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="quote">“</div>
+          <h3>تجربة العميل</h3>
+          <p>
+            رضا العميل وجودة العمل هما من أهم
+            أولويات Taha Technologies.
+          </p>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="quote">“</div>
+          <h3>رؤيتنا</h3>
+          <p>
+            نبني حلولًا رقمية بسيطة وعصرية وقابلة
+            للتطوير مع نمو المشروع.
+          </p>
+        </div>
+
       </div>
 
-      <div class="card">
-        <div class="icon">🚀</div>
-        <h3>المشاريع الرقمية</h3>
-        <p>
-          تحويل الأفكار إلى مشاريع رقمية قابلة
-          للتطوير والنمو.
-        </p>
+    </section>
+
+    <!-- التواصل -->
+    <section id="contact" class="contact">
+
+      <h2>تواصل معنا</h2>
+
+      <p>
+        لديك فكرة أو مشروع؟ اكتب لنا رسالتك
+        وسنعمل على مساعدتك.
+      </p>
+
+      <form
+        id="contact-form"
+        class="contact-form"
+        action="https://formspree.io/f/mjyydvkw"
+        method="POST">
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="رسالة جديدة من موقع Taha Technologies">
+
+        <label for="visitor-name">الاسم</label>
+
+        <input
+          id="visitor-name"
+          type="text"
+          name="name"
+          placeholder="اكتب اسمك"
+          autocomplete="name"
+          required>
+
+        <label for="visitor-email">البريد الإلكتروني</label>
+
+        <input
+          id="visitor-email"
+          type="email"
+          name="email"
+          placeholder="example@email.com"
+          autocomplete="email"
+          required>
+
+        <label for="visitor-message">الرسالة</label>
+
+        <textarea
+          id="visitor-message"
+          name="message"
+          placeholder="اكتب رسالتك هنا..."
+          required></textarea>
+
+        <button
+          id="submit-button"
+          class="button"
+          type="submit">
+          إرسال الرسالة
+        </button>
+
+        <p
+          id="form-status"
+          role="status"
+          aria-live="polite"></p>
+
+      </form>
+
+      <div class="contact-buttons">
+
+        <a
+          class="button"
+          href="mailto:tahac1836@gmail.com">
+          📧 راسلنا عبر البريد
+        </a>
+
+        <button
+          class="button whatsapp-button"
+          type="button"
+          onclick="showWhatsAppMessage()">
+          💬 واتساب
+        </button>
+
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="projects">
-    <h2>مشاريعنا</h2>
+  </main>
 
-    <p>
-      بعض المشاريع والأعمال التي نعمل عليها في Taha Technologies.
-    </p>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-icon">🌐</div>
-        <h3>مشروع موقع إلكتروني</h3>
-        <p>
-          تصميم وتطوير موقع إلكتروني حديث ومتجاوب
-          مع مختلف الأجهزة.
-        </p>
-        <span>قيد التطوير</span>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon">💻</div>
-        <h3>مشروع برمجي</h3>
-        <p>
-          تطوير حل برمجي يساعد على تحسين وتنظيم
-          الأعمال الرقمية.
-        </p>
-        <span>قيد التطوير</span>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon">🚀</div>
-        <h3>مشروع رقمي</h3>
-        <p>
-          تحويل فكرة مبتكرة إلى مشروع رقمي قابل
-          للتطوير والنمو.
-        </p>
-        <span>قريبًا</span>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- آراء العملاء -->
-  <section id="testimonials" class="testimonials">
-    <h2>آراء العملاء</h2>
-
-    <p>
-      نطمح دائمًا إلى تقديم تجربة رقمية مميزة
-      وبناء علاقات طويلة الأمد مع عملائنا.
-    </p>
-
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card">
-        <div class="quote">“</div>
-        <h3>عميلنا القادم</h3>
-        <p>
-          نسعى لتقديم حلول تقنية احترافية تساعد
-          العملاء على تحقيق أهدافهم الرقمية.
-        </p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="quote">“</div>
-        <h3>تجربة العميل</h3>
-        <p>
-          رضا العميل وجودة العمل هما من أهم
-          أولويات Taha Technologies.
-        </p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="quote">“</div>
-        <h3>رؤيتنا</h3>
-        <p>
-          نبني حلولًا رقمية بسيطة وعصرية وقابلة
-          للتطوير مع نمو المشروع.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>تواصل معنا</h2>
-
-    <p>
-      لديك فكرة أو مشروع؟ اكتب لنا رسالتك
-      وسنعمل على مساعدتك.
-    </p>
-
-    <form
-      id="contact-form"
-      class="contact-form"
-      action="https://formspree.io/f/mjyydvkw"
-      method="POST"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="رسالة جديدة من موقع Taha Technologies"
-      >
-
-      <label for="visitor-name">الاسم</label>
-
-      <input
-        id="visitor-name"
-        type="text"
-        name="name"
-        placeholder="اكتب اسمك"
-        autocomplete="name"
-        required
-      >
-
-      <label for="visitor-email">البريد الإلكتروني</label>
-
-      <input
-        id="visitor-email"
-        type="email"
-        name="email"
-        placeholder="example@email.com"
-        autocomplete="email"
-        required
-      >
-
-      <label for="visitor-message">الرسالة</label>
-
-      <textarea
-        id="visitor-message"
-        name="message"
-        placeholder="اكتب رسالتك هنا..."
-        required
-      ></textarea>
-
-      <button
-        id="submit-button"
-        class="button"
-        type="submit"
-      >
-        إرسال الرسالة
-      </button>
-
-      <p
-        id="form-status"
-        role="status"
-        aria-live="polite"
-      ></p>
-
-    </form>
-
-    <div class="contact-buttons">
-
-      <a
-        class="button"
-        href="mailto:tahac1836@gmail.com"
-      >
-        📧 راسلنا عبر البريد
-      </a>
-
-      <button
-        class="button whatsapp-button"
-        type="button"
-        onclick="showWhatsAppMessage()"
-      >
-        💬 واتساب
-      </button>
-
-    </div>
-  </section>
-
+  <!-- التذييل -->
   <footer>
-    © 2026 Taha Technologies — جميع الحقوق محفوظة
+    <p>
+      © 2026 Taha Technologies — جميع الحقوق محفوظة
+    </p>
+    <p>
+      <a href="mailto:tahac1836@gmail.com">تواصل معنا</a>
+    </p>
   </footer>
 
   <!-- زر العودة إلى الأعلى -->
   <button
     id="back-to-top"
-    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    type="button"
     aria-label="العودة إلى الأعلى"
-    title="العودة إلى الأعلى"
-  >
+    title="العودة إلى الأعلى">
     ↑
   </button>
 
   <script>
 
+    /* تفعيل تحسينات الحركة */
+    document.documentElement.classList.add("js");
+
+    /* زر واتساب */
     function showWhatsAppMessage() {
       alert(
         "واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com"
@@ -660,7 +895,6 @@
     }
 
     /* زر العودة إلى الأعلى */
-
     const backToTopButton = document.getElementById("back-to-top");
 
     window.addEventListener("scroll", function () {
@@ -671,10 +905,48 @@
         backToTopButton.style.display = "none";
       }
 
+    }, { passive: true });
+
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
 
-    /* نموذج التواصل */
+    /* تأثير ظهور العناصر عند التمرير */
+    const revealElements = document.querySelectorAll(".reveal");
 
+    if ("IntersectionObserver" in window) {
+
+      const revealObserver = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+
+        });
+
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+      });
+
+    } else {
+
+      revealElements.forEach(function (element) {
+        element.classList.add("visible");
+      });
+
+    }
+
+    /* نموذج التواصل */
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
     const submitButton = document.getElementById("submit-button");
