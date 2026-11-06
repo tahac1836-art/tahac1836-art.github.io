@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -16,7 +17,6 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -144,7 +144,8 @@
     }
 
     .cards,
-    .projects-grid {
+    .projects-grid,
+    .testimonials-grid {
       max-width: 1100px;
       margin: 45px auto 0;
       display: grid;
@@ -153,7 +154,8 @@
     }
 
     .card,
-    .project-card {
+    .project-card,
+    .testimonial-card {
       background: #182235;
       border: 1px solid #263247;
       border-radius: 15px;
@@ -162,7 +164,8 @@
     }
 
     .card:hover,
-    .project-card:hover {
+    .project-card:hover,
+    .testimonial-card:hover {
       transform: translateY(-7px);
       border-color: #38bdf8;
     }
@@ -204,6 +207,37 @@
       background: #172554;
       color: #7dd3fc;
       font-size: 13px;
+    }
+
+    /* آراء العملاء */
+    .testimonials {
+      background: #111827;
+    }
+
+    .testimonial-card {
+      text-align: center;
+    }
+
+    .testimonial-icon {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card p {
+      color: #cbd5e1;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-card h3 {
+      color: #38bdf8;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .testimonial-card span {
+      color: #94a3b8;
+      font-size: 14px;
     }
 
     .contact-buttons {
@@ -262,7 +296,6 @@
       margin-top: 15px;
       text-align: center;
       color: #7dd3fc;
-      font-weight: bold;
     }
 
     footer {
@@ -323,6 +356,7 @@
       <a href="#about">من نحن</a>
       <a href="#services">خدماتنا</a>
       <a href="#projects">مشاريعنا</a>
+      <a href="#testimonials">آراء العملاء</a>
       <a href="#contact">تواصل معنا</a>
     </div>
   </nav>
@@ -330,16 +364,13 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Taha Technologies</h1>
-
       <h2>حلول تقنية عصرية</h2>
 
       <p>
         نحول أفكارك إلى حلول رقمية ومواقع احترافية باستخدام التكنولوجيا الحديثة.
       </p>
 
-      <a class="button" href="#services">
-        اكتشف خدماتنا
-      </a>
+      <a class="button" href="#services">اكتشف خدماتنا</a>
     </div>
   </header>
 
@@ -407,7 +438,6 @@
 
       <div class="project-card">
         <div class="project-icon">🌐</div>
-
         <h3>مشروع موقع إلكتروني</h3>
 
         <p>
@@ -419,7 +449,6 @@
 
       <div class="project-card">
         <div class="project-icon">💻</div>
-
         <h3>مشروع برمجي</h3>
 
         <p>
@@ -431,7 +460,6 @@
 
       <div class="project-card">
         <div class="project-icon">🚀</div>
-
         <h3>مشروع رقمي</h3>
 
         <p>
@@ -442,6 +470,54 @@
       </div>
 
     </div>
+  </section>
+
+  <!-- آراء العملاء -->
+  <section id="testimonials" class="testimonials">
+
+    <h2>آراء العملاء</h2>
+
+    <p>
+      نحرص دائمًا على تقديم تجربة تقنية مميزة واحترافية.
+    </p>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-icon">⭐</div>
+
+        <p>
+          نعمل حاليًا على تطوير خدماتنا، وسنضيف آراء عملائنا الحقيقيين هنا قريبًا.
+        </p>
+
+        <h3>عميلنا القادم</h3>
+        <span>Taha Technologies</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-icon">💬</div>
+
+        <p>
+          نسعد بتجارب العملاء وملاحظاتهم، ونسعى دائمًا إلى تحسين خدماتنا الرقمية.
+        </p>
+
+        <h3>تجربة العميل</h3>
+        <span>قريبًا</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-icon">🚀</div>
+
+        <p>
+          هدفنا بناء حلول رقمية بسيطة، حديثة، وقابلة للتطوير مع نمو المشروع.
+        </p>
+
+        <h3>رؤيتنا</h3>
+        <span>Taha Technologies</span>
+      </div>
+
+    </div>
+
   </section>
 
   <section id="contact" class="contact">
@@ -456,14 +532,12 @@
       id="contact-form"
       class="contact-form"
       action="https://formspree.io/f/mjyydvkw"
-      method="POST"
-    >
+      method="POST">
 
       <input
         type="hidden"
         name="_subject"
-        value="رسالة جديدة من موقع Taha Technologies"
-      >
+        value="رسالة جديدة من موقع Taha Technologies">
 
       <label for="visitor-name">الاسم</label>
 
@@ -473,8 +547,7 @@
         name="name"
         placeholder="اكتب اسمك"
         autocomplete="name"
-        required
-      >
+        required>
 
       <label for="visitor-email">البريد الإلكتروني</label>
 
@@ -484,8 +557,7 @@
         name="email"
         placeholder="example@email.com"
         autocomplete="email"
-        required
-      >
+        required>
 
       <label for="visitor-message">الرسالة</label>
 
@@ -493,22 +565,20 @@
         id="visitor-message"
         name="message"
         placeholder="اكتب رسالتك هنا..."
-        required
-      ></textarea>
+        required></textarea>
 
       <button
         id="submit-button"
         class="button"
-        type="submit"
-      >
+        type="submit">
         إرسال الرسالة
       </button>
 
       <p
         id="form-status"
         role="status"
-        aria-live="polite"
-      ></p>
+        aria-live="polite">
+      </p>
 
     </form>
 
@@ -516,16 +586,14 @@
 
       <a
         class="button"
-        href="mailto:tahac1836@gmail.com"
-      >
+        href="mailto:tahac1836@gmail.com">
         📧 راسلنا عبر البريد
       </a>
 
       <button
         class="button whatsapp-button"
         type="button"
-        onclick="showWhatsAppMessage()"
-      >
+        onclick="showWhatsAppMessage()">
         💬 واتساب
       </button>
 
@@ -599,3 +667,4 @@
 
 </body>
 </html>
+```
