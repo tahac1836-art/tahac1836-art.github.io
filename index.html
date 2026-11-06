@@ -3,75 +3,360 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقعي</title>
+
+  <title>تقنيات طه | Taha Technologies</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      min-height: 100vh;
+      font-family: Arial, Tahoma, sans-serif;
+      background: #0b1220;
+      color: #ffffff;
+      line-height: 1.8;
+    }
+
+    /* القائمة */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 18, 32, 0.97);
+      border-bottom: 1px solid #263247;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #38bdf8;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      margin-right: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* الصفحة الرئيسية */
+    .hero {
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .container {
       text-align: center;
-      background: white;
-      padding: 50px 30px;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 700px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+
+      background:
+        radial-gradient(circle at top, #172554 0%, #0b1220 55%);
     }
 
-    h1 {
-      font-size: 42px;
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 80px);
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 30px;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 20px;
-      color: #666;
-      margin-bottom: 30px;
+    .hero p {
+      color: #cbd5e1;
+      font-size: 19px;
+      margin-bottom: 35px;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 28px;
-      background: #24292f;
-      color: white;
+      background: #38bdf8;
+      color: #07111f;
+      padding: 13px 30px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .button:hover {
-      opacity: 0.85;
+      transform: translateY(-3px);
+      background: #7dd3fc;
+    }
+
+    /* الأقسام */
+    section {
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #38bdf8;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    section > p {
+      max-width: 750px;
+      margin: auto;
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    /* من نحن */
+    .about {
+      background: #0f172a;
+    }
+
+    /* الخدمات */
+    .services {
+      background: #111827;
+    }
+
+    .cards {
+      max-width: 1100px;
+      margin: 45px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #182235;
+      border: 1px solid #263247;
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #38bdf8;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      font-size: 16px;
+    }
+
+    /* التواصل */
+    .contact {
+      background: #0f172a;
+    }
+
+    .contact .button {
+      margin-top: 30px;
+    }
+
+    /* أسفل الموقع */
+    footer {
+      background: #070d18;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    /* الهاتف */
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>مرحبًا بك في موقعي 👋</h1>
+  <!-- القائمة -->
+  <nav>
+
+    <div class="logo">
+      Taha Technologies
+    </div>
+
+    <div>
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+
+  </nav>
+
+
+  <!-- الصفحة الرئيسية -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <h1>طه للتقنيات</h1>
+
+      <h2>حلول تقنية عصرية</h2>
+
+      <p>
+        نحول أفكارك إلى حلول رقمية ومواقع احترافية
+        باستخدام التكنولوجيا الحديثة.
+      </p>
+
+      <a class="button" href="#services">
+        اكتشف خدماتنا
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- من نحن -->
+  <section id="about" class="about">
+
+    <h2>من نحن</h2>
 
     <p>
-      هذا أول موقع لي على GitHub Pages.
+      طه للتقنيات هي منصة تقنية تهدف إلى تقديم
+      حلول رقمية حديثة وبسيطة واحترافية للأفراد
+      والمشاريع والأعمال.
     </p>
 
-    <a class="button" href="#">
-      ابدأ الآن
+  </section>
+
+
+  <!-- الخدمات -->
+  <section id="services" class="services">
+
+    <h2>خدماتنا</h2>
+
+    <p>
+      نقدم مجموعة من الخدمات التقنية لمساعدتك
+      على بناء حضور رقمي قوي.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🌐</div>
+
+        <h3>تطوير المواقع</h3>
+
+        <p>
+          إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز
+          على الهاتف والكمبيوتر.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">💻</div>
+
+        <h3>البرمجة</h3>
+
+        <p>
+          تطوير حلول وبرامج رقمية تناسب احتياجات
+          المشاريع والأعمال.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🎨</div>
+
+        <h3>التصميم</h3>
+
+        <p>
+          تصميم واجهات جذابة وسهلة الاستخدام
+          للمشاريع والمواقع الرقمية.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🚀</div>
+
+        <h3>المشاريع الرقمية</h3>
+
+        <p>
+          تحويل الأفكار إلى مشاريع رقمية قابلة
+          للتطوير والنمو.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- التواصل -->
+  <section id="contact" class="contact">
+
+    <h2>تواصل معنا</h2>
+
+    <p>
+      لديك فكرة أو مشروع؟
+      تواصل معنا وسنعمل على تحويل فكرتك
+      إلى واقع رقمي.
+    </p>
+
+    <a class="button" href="mailto:contact@example.com">
+      راسلنا
     </a>
-  </div>
+
+  </section>
+
+
+  <!-- الحقوق -->
+  <footer>
+
+    © 2026 طه للتقنيات — جميع الحقوق محفوظة
+
+  </footer>
 
 </body>
 </html>
