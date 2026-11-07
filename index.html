@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -60,6 +59,7 @@
       --text:#fff;
       --muted:#cbd5e1;
       --green:#22c55e;
+      --gold:#f59e0b;
     }
 
     *{
@@ -388,7 +388,7 @@
     }
 
     .app-card{
-      max-width:1050px;
+      max-width:1100px;
       margin:40px auto 0;
       background:linear-gradient(145deg,#182235,#101827);
       border:1px solid rgba(56,189,248,.35);
@@ -474,18 +474,33 @@
       border-radius:18px;
       background:rgba(15,23,42,.7);
       padding:25px;
-      text-align:center
+      text-align:center;
+      overflow:hidden
     }
 
-    .placeholder{
-      color:#94a3b8;
-      font-size:17px
+    .app-image{
+      width:100%;
+      height:auto;
+      max-height:520px;
+      object-fit:contain;
+      border-radius:12px;
+      display:block
     }
 
-    .placeholder .big{
+    .video-box{
+      width:100%;
+      margin-top:28px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid #334155;
+      background:#050b14
+    }
+
+    .video-box video{
       display:block;
-      font-size:70px;
-      margin-bottom:10px
+      width:100%;
+      height:auto;
+      max-height:650px
     }
 
     .app-features{
@@ -526,6 +541,79 @@
       border-right:4px solid var(--primary);
       color:var(--muted);
       font-size:15px
+    }
+
+    .request-box{
+      margin-top:32px;
+      padding:28px;
+      background:#0f172a;
+      border:1px solid rgba(56,189,248,.35);
+      border-radius:18px
+    }
+
+    .request-box h4{
+      color:var(--primary);
+      font-size:23px;
+      margin-bottom:8px
+    }
+
+    .request-box>p{
+      color:var(--muted);
+      margin-bottom:20px
+    }
+
+    .request-form{
+      display:grid;
+      gap:14px
+    }
+
+    .request-form label{
+      color:#e2e8f0;
+      font-weight:bold;
+      text-align:right
+    }
+
+    .request-form input,
+    .request-form textarea{
+      width:100%;
+      padding:13px 14px;
+      border-radius:8px;
+      border:1px solid #475569;
+      background:#0b1220;
+      color:white;
+      font:inherit;
+      outline:none
+    }
+
+    .request-form input:focus,
+    .request-form textarea:focus{
+      border-color:var(--primary)
+    }
+
+    .request-form textarea{
+      min-height:120px;
+      resize:vertical
+    }
+
+    .request-form button{
+      margin-top:5px
+    }
+
+    .request-status{
+      min-height:30px;
+      margin-top:10px;
+      text-align:center;
+      color:var(--primary-light)
+    }
+
+    .approval-note{
+      margin-top:15px;
+      padding:12px 15px;
+      border-radius:10px;
+      background:rgba(245,158,11,.08);
+      border:1px solid rgba(245,158,11,.3);
+      color:#fde68a;
+      font-size:14px
     }
 
     .testimonial-card{
@@ -587,7 +675,8 @@
       width:100%
     }
 
-    .contact-form button:disabled{
+    .contact-form button:disabled,
+    .request-form button:disabled{
       opacity:.65;
       cursor:wait;
       transform:none
@@ -807,6 +896,10 @@
         text-align:center
       }
 
+      .request-box{
+        padding:20px 16px
+      }
+
       #back-to-top{
         bottom:18px;
         left:18px;
@@ -833,577 +926,792 @@
 
 <body>
 
-  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+<a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
 
-  <nav aria-label="القائمة الرئيسية">
-    <a class="logo" href="#top" aria-label="Taha Technologies Algeria - الصفحة الرئيسية">
-      <img src="شعار طه للتقنيات المبتكرة.png" alt="شعار Taha Technologies Algeria" fetchpriority="high">
-    </a>
+<nav aria-label="القائمة الرئيسية">
 
-    <div class="nav-links">
-      <a href="#about">من نحن</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#projects">مشاريعنا</a>
-      <a href="#apps">تطبيقاتنا</a>
-      <a href="#testimonials">آراء العملاء</a>
-      <a href="#contact">تواصل معنا</a>
+  <a class="logo"
+     href="#top"
+     aria-label="Taha Technologies Algeria - الصفحة الرئيسية">
+
+    <img src="شعار طه للتقنيات المبتكرة.png"
+         alt="شعار Taha Technologies Algeria"
+         fetchpriority="high">
+
+  </a>
+
+  <div class="nav-links">
+    <a href="#about">من نحن</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#projects">مشاريعنا</a>
+    <a href="#apps">تطبيقاتنا</a>
+    <a href="#testimonials">آراء العملاء</a>
+    <a href="#contact">تواصل معنا</a>
+  </div>
+
+</nav>
+
+<main id="main-content">
+
+<header id="top" class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-copy">
+
+      <div class="hero-brand">
+        <h1>Taha Technologies</h1>
+      </div>
+
+      <h2>Taha Technologies Algeria 🇩🇿</h2>
+
+      <p style="color:var(--primary-light);font-size:23px;font-weight:bold;margin-bottom:12px;">
+        تقنيات تكنولوجية مبتكرة
+      </p>
+
+      <p>
+        نحول أفكارك إلى حلول رقمية ومواقع احترافية باستخدام التكنولوجيا الحديثة.
+      </p>
+
+      <a class="button" href="#services">
+        اكتشف خدماتنا
+      </a>
+
     </div>
-  </nav>
 
-  <main id="main-content">
+    <div class="hero-emblem">
 
-    <header id="top" class="hero">
-      <div class="hero-content">
+      <img src="CHOUIKHI-TAHAR-3D.gif"
+           alt="الشعار المتحرك ثلاثي الأبعاد CHOUIKHI TAHAR"
+           fetchpriority="high">
 
-        <div class="hero-copy">
+    </div>
 
-          <div class="hero-brand">
-            <h1>Taha Technologies</h1>
-          </div>
+  </div>
 
-          <h2>Taha Technologies Algeria 🇩🇿</h2>
+</header>
 
-          <p style="color:var(--primary-light);font-size:23px;font-weight:bold;margin-bottom:12px;">
-            تقنيات تكنولوجية مبتكرة
-          </p>
+<section id="about" class="about reveal">
 
-          <p>
-            نحول أفكارك إلى حلول رقمية ومواقع احترافية باستخدام التكنولوجيا الحديثة.
-          </p>
+  <h2>من نحن</h2>
 
-          <a class="button" href="#services">اكتشف خدماتنا</a>
+  <p>
+    Taha Technologies Algeria هي منصة تقنية تهدف إلى تقديم تقنيات تكنولوجية مبتكرة
+    وحلول رقمية حديثة وبسيطة واحترافية للأفراد والمشاريع والأعمال.
+  </p>
 
-        </div>
+</section>
 
-        <div class="hero-emblem">
-          <img src="CHOUIKHI-TAHAR-3D.gif"
-               alt="الشعار المتحرك ثلاثي الأبعاد CHOUIKHI TAHAR"
-               fetchpriority="high">
-        </div>
+<section id="services" class="services">
 
-      </div>
-    </header>
+  <h2>خدماتنا</h2>
 
-    <section id="about" class="about reveal">
-      <h2>من نحن</h2>
+  <p>
+    نقدم مجموعة من الخدمات التقنية لمساعدتك على بناء حضور رقمي قوي.
+  </p>
 
+  <div class="cards">
+
+    <div class="card reveal">
+      <div class="icon">🌐</div>
+      <h3>تطوير المواقع</h3>
       <p>
-        Taha Technologies Algeria هي منصة تقنية تهدف إلى تقديم تقنيات تكنولوجية مبتكرة
-        وحلول رقمية حديثة وبسيطة واحترافية للأفراد والمشاريع والأعمال.
+        إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز على الهاتف والكمبيوتر.
       </p>
-    </section>
+    </div>
 
-    <section id="services" class="services">
-
-      <h2>خدماتنا</h2>
-
+    <div class="card reveal">
+      <div class="icon">💻</div>
+      <h3>البرمجة</h3>
       <p>
-        نقدم مجموعة من الخدمات التقنية لمساعدتك على بناء حضور رقمي قوي.
+        تطوير حلول وبرامج رقمية تناسب احتياجات المشاريع والأعمال.
       </p>
+    </div>
 
-      <div class="cards">
-
-        <div class="card reveal">
-          <div class="icon">🌐</div>
-          <h3>تطوير المواقع</h3>
-          <p>
-            إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز على الهاتف والكمبيوتر.
-          </p>
-        </div>
-
-        <div class="card reveal">
-          <div class="icon">💻</div>
-          <h3>البرمجة</h3>
-          <p>
-            تطوير حلول وبرامج رقمية تناسب احتياجات المشاريع والأعمال.
-          </p>
-        </div>
-
-        <div class="card reveal">
-          <div class="icon">🎨</div>
-          <h3>التصميم</h3>
-          <p>
-            تصميم واجهات جذابة وسهلة الاستخدام للمشاريع والمواقع الرقمية.
-          </p>
-        </div>
-
-        <div class="card reveal">
-          <div class="icon">🚀</div>
-          <h3>المشاريع الرقمية</h3>
-          <p>
-            تحويل الأفكار إلى مشاريع رقمية قابلة للتطوير والنمو.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-
-      <h2>مشاريعنا</h2>
-
+    <div class="card reveal">
+      <div class="icon">🎨</div>
+      <h3>التصميم</h3>
       <p>
-        بعض المشاريع والأعمال التي نعمل عليها في Taha Technologies Algeria.
+        تصميم واجهات جذابة وسهلة الاستخدام للمشاريع والمواقع الرقمية.
       </p>
+    </div>
 
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="project-icon">🌐</div>
-          <h3>مشروع موقع إلكتروني</h3>
-          <p>
-            تصميم وتطوير موقع إلكتروني حديث ومتجاوب مع مختلف الأجهزة.
-          </p>
-          <span>قيد التطوير</span>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">💻</div>
-          <h3>مشروع برمجي</h3>
-          <p>
-            تطوير حل برمجي يساعد على تحسين وتنظيم الأعمال الرقمية.
-          </p>
-          <span>قيد التطوير</span>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon">🚀</div>
-          <h3>مشروع رقمي</h3>
-          <p>
-            تحويل فكرة مبتكرة إلى مشروع رقمي قابل للتطوير والنمو.
-          </p>
-          <span>قريبًا</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="apps" class="app-section">
-
-      <h2>تطبيقاتنا وبرامجنا</h2>
-
+    <div class="card reveal">
+      <div class="icon">🚀</div>
+      <h3>المشاريع الرقمية</h3>
       <p>
-        اكتشف تطبيقات Taha Technologies Algeria المصممة لمساعدة أصحاب الأعمال
-        على تنظيم أعمالهم بطريقة بسيطة وعصرية.
+        تحويل الأفكار إلى مشاريع رقمية قابلة للتطوير والنمو.
       </p>
+    </div>
 
-      <div class="app-card reveal">
+  </div>
 
-        <div class="app-top">
+</section>
 
-          <div class="app-info">
+<section id="projects" class="projects">
 
-            <h3>T.N.I.A Market Pro</h3>
+  <h2>مشاريعنا</h2>
 
-            <div class="app-subtitle">
-              برنامج احترافي لإدارة المحلات والمبيعات على الهاتف.
-            </div>
+  <p>
+    بعض المشاريع والأعمال التي نعمل عليها في Taha Technologies Algeria.
+  </p>
 
-            <p>
-              تطبيق Android مصمم لمساعدة أصحاب المحلات على تنظيم
-              وإدارة أعمالهم بسهولة من الهاتف.
-            </p>
+  <div class="projects-grid">
 
-            <div class="app-badges">
-              <span class="app-badge">📱 Android</span>
-              <span class="app-badge">🎁 تجربة مجانية 3 أيام</span>
-              <span class="app-badge">🔐 نظام ترخيص</span>
-            </div>
+    <div class="project-card reveal">
+      <div class="project-icon">🌐</div>
+      <h3>مشروع موقع إلكتروني</h3>
+      <p>
+        تصميم وتطوير موقع إلكتروني حديث ومتجاوب مع مختلف الأجهزة.
+      </p>
+      <span>قيد التطوير</span>
+    </div>
 
-            <div class="app-price">
-              💰 <strong>السعر يتم الاتفاق عليه عبر الهاتف</strong>
-            </div>
+    <div class="project-card reveal">
+      <div class="project-icon">💻</div>
+      <h3>مشروع برمجي</h3>
+      <p>
+        تطوير حل برمجي يساعد على تحسين وتنظيم الأعمال الرقمية.
+      </p>
+      <span>قيد التطوير</span>
+    </div>
 
-            <div class="app-buttons">
+    <div class="project-card reveal">
+      <div class="project-icon">🚀</div>
+      <h3>مشروع رقمي</h3>
+      <p>
+        تحويل فكرة مبتكرة إلى مشروع رقمي قابل للتطوير والنمو.
+      </p>
+      <span>قريبًا</span>
+    </div>
 
-              <a class="button" href="mailto:tahac1836@gmail.com?subject=طلب شراء T.N.I.A Market Pro">
-                📩 اطلب البرنامج الآن
-              </a>
+  </div>
 
-              <a class="button" href="#contact">
-                📞 تواصل معنا
-              </a>
+</section>
 
-            </div>
+<section id="apps" class="app-section">
 
-          </div>
+  <h2>تطبيقاتنا وبرامجنا</h2>
 
-          <div class="app-visual">
+  <p>
+    اكتشف تطبيقات Taha Technologies Algeria المصممة لمساعدة أصحاب الأعمال
+    على تنظيم أعمالهم بطريقة بسيطة وعصرية.
+  </p>
 
-            <div class="placeholder">
+  <div class="app-card reveal">
 
-              <span class="big">📱</span>
+    <div class="app-top">
 
-              <strong>صورة التطبيق</strong>
+      <div class="app-info">
 
-              <br>
+        <h3>T.N.I.A Market Pro</h3>
 
-              ستتم إضافة صور T.N.I.A Market Pro هنا
+        <div class="app-subtitle">
+          برنامج احترافي لإدارة المحلات والمبيعات على الهاتف.
+        </div>
 
-              <br>
+        <p>
+          تطبيق Android مصمم لمساعدة أصحاب المحلات على تنظيم
+          وإدارة أعمالهم بسهولة من الهاتف، دون الحاجة إلى كمبيوتر أو إنترنت.
+        </p>
 
-              <small>
-                المكان جاهز لإضافة صور البرنامج
-              </small>
+        <div class="app-badges">
 
-            </div>
+          <span class="app-badge">
+            📱 Android
+          </span>
 
-          </div>
+          <span class="app-badge">
+            🎁 تجربة مجانية 3 أيام
+          </span>
+
+          <span class="app-badge">
+            🔐 نظام ترخيص
+          </span>
 
         </div>
 
-        <div class="app-features">
-
-          <div class="feature">
-            <div class="feature-icon">🏪</div>
-            <h4>مناسب للمحلات</h4>
-            <p>
-              حل عملي لمساعدة أصحاب المحلات في إدارة أعمالهم.
-            </p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">📱</div>
-            <h4>يعمل على Android</h4>
-            <p>
-              مصمم للاستخدام على الهواتف والأجهزة المتوافقة.
-            </p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🎁</div>
-            <h4>تجربة مجانية</h4>
-            <p>
-              إمكانية تجربة البرنامج لمدة 3 أيام قبل التفعيل.
-            </p>
-          </div>
-
+        <div class="app-price">
+          💰 <strong>السعر يتم الاتفاق عليه عبر الهاتف</strong>
         </div>
 
-        <div class="app-note">
+        <div class="app-buttons">
 
-          <strong>طريقة الحصول على البرنامج:</strong>
+          <button class="button"
+                  type="button"
+                  onclick="showRequestForm()">
+            📩 اطلب البرنامج الآن
+          </button>
 
-          <br>
-
-          بعد التواصل والاتفاق على السعر، يتم إرسال نسخة التثبيت
-          للعميل، ثم يمكنه تجربة البرنامج لمدة 3 أيام.
-          بعد ذلك يتم تفعيل الترخيص حسب الاتفاق.
-
-          <br><br>
-
-          🔐 الترخيص مخصص لهاتف واحد، وتغيير الهاتف يحتاج إلى رمز ترخيص جديد.
-
-        </div>
-
-        <div class="app-visual" style="margin-top:25px;">
-
-          <div class="placeholder">
-
-            <span class="big">🎬</span>
-
-            <strong>الفيديو الإعلاني</strong>
-
-            <br>
-
-            سيتم إضافة فيديو T.N.I.A Market Pro هنا
-
-            <br>
-
-            <small>
-              المكان جاهز للفيديو
-            </small>
-
-          </div>
+          <a class="button" href="#contact">
+            📞 تواصل معنا
+          </a>
 
         </div>
 
       </div>
-    </section>
 
-    <section id="testimonials" class="testimonials">
+      <div class="app-visual">
 
-      <h2>آراء العملاء</h2>
-
-      <p>
-        نطمح دائمًا إلى تقديم تجربة رقمية مميزة وبناء علاقات طويلة الأمد مع عملائنا.
-      </p>
-
-      <div class="testimonials-grid">
-
-        <div class="testimonial-card reveal">
-          <div class="quote">“</div>
-          <h3>عميلنا القادم</h3>
-          <p>
-            نسعى لتقديم حلول تقنية احترافية تساعد العملاء على تحقيق أهدافهم الرقمية.
-          </p>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <div class="quote">“</div>
-          <h3>تجربة العميل</h3>
-          <p>
-            رضا العميل وجودة العمل هما من أهم أولويات Taha Technologies.
-          </p>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <div class="quote">“</div>
-          <h3>رؤيتنا</h3>
-          <p>
-            نبني تقنيات تكنولوجية مبتكرة وحلولًا رقمية بسيطة وعصرية وقابلة للتطوير مع نمو المشروع.
-          </p>
-        </div>
+        <img class="app-image"
+             src="ad-facebook-2.png"
+             alt="الإعلان التعريفي لتطبيق T.N.I.A Market Pro">
 
       </div>
-    </section>
 
-    <section id="contact" class="contact">
+    </div>
 
-      <h2>تواصل معنا</h2>
+    <div class="app-features">
+
+      <div class="feature">
+        <div class="feature-icon">🏪</div>
+        <h4>مناسب للمحلات</h4>
+        <p>
+          حل عملي لمساعدة أصحاب المحلات في إدارة أعمالهم.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">📱</div>
+        <h4>يعمل على Android</h4>
+        <p>
+          مصمم للاستخدام على الهواتف والأجهزة المتوافقة.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🎁</div>
+        <h4>تجربة مجانية</h4>
+        <p>
+          إمكانية تجربة البرنامج لمدة 3 أيام قبل التفعيل.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="app-note">
+
+      <strong>طريقة الحصول على البرنامج:</strong>
+
+      <br>
+
+      أرسل طلبك من خلال النموذج الموجود أسفل هذه البطاقة.
+      سيصل طلبك إلى إدارة Taha Technologies، وبعد مراجعة الطلب
+      والتواصل معك والاتفاق على السعر، يتم إرسال نسخة التثبيت للعميل.
+
+      <br><br>
+
+      🔐 لا يوجد تحميل عام للبرنامج من الموقع.
+      يتم إرسال ملف التثبيت فقط بعد الموافقة على الطلب.
+
+      <br><br>
+
+      🔐 الترخيص مخصص لهاتف واحد، وتغيير الهاتف يحتاج إلى رمز ترخيص جديد.
+
+    </div>
+
+    <div class="video-box">
+
+      <video controls
+             preload="metadata"
+             playsinline
+             poster="ad-facebook-2.png">
+
+        <source src="TNIA-tutorial-final-v2.mp4"
+                type="video/mp4">
+
+        متصفحك لا يدعم تشغيل الفيديو.
+
+      </video>
+
+    </div>
+
+    <!-- نموذج طلب البرنامج -->
+
+    <div id="program-request"
+         class="request-box"
+         style="display:none;">
+
+      <h4>
+        📩 طلب T.N.I.A Market Pro
+      </h4>
 
       <p>
-        لديك فكرة أو مشروع؟ اكتب لنا رسالتك وسنعمل على مساعدتك.
+        املأ البيانات التالية لإرسال طلبك.
+        بعد وصول الطلب سنراجعه ونتواصل معك.
       </p>
 
-      <form id="contact-form"
-            class="contact-form"
+      <form id="program-request-form"
+            class="request-form"
             action="https://formspree.io/f/mjyydvkw"
             method="POST">
 
         <input type="hidden"
                name="_subject"
-               value="رسالة جديدة من موقع Taha Technologies Algeria">
+               value="طلب جديد لبرنامج T.N.I.A Market Pro">
 
-        <label for="visitor-name">الاسم</label>
+        <input type="hidden"
+               name="request_type"
+               value="طلب الحصول على T.N.I.A Market Pro">
 
-        <input id="visitor-name"
+        <label for="program-name">
+          الاسم *
+        </label>
+
+        <input id="program-name"
                type="text"
                name="name"
                placeholder="اكتب اسمك"
                autocomplete="name"
                required>
 
-        <label for="visitor-email">البريد الإلكتروني</label>
+        <label for="program-email">
+          البريد الإلكتروني *
+        </label>
 
-        <input id="visitor-email"
+        <input id="program-email"
                type="email"
                name="email"
                placeholder="example@email.com"
                autocomplete="email"
                required>
 
-        <label for="visitor-message">الرسالة</label>
+        <label for="program-phone">
+          رقم الهاتف
+        </label>
 
-        <textarea id="visitor-message"
+        <input id="program-phone"
+               type="tel"
+               name="phone"
+               placeholder="مثال: 0770000000"
+               autocomplete="tel">
+
+        <label for="program-message">
+          ملاحظات أو رسالة
+        </label>
+
+        <textarea id="program-message"
                   name="message"
-                  placeholder="اكتب رسالتك هنا..."
-                  required></textarea>
+                  placeholder="اكتب أي معلومات أو أسئلة تريد إضافتها..."></textarea>
 
-        <button id="submit-button"
+        <button id="program-submit"
                 class="button"
                 type="submit">
-          إرسال الرسالة
+          إرسال طلب البرنامج
         </button>
 
-        <p id="form-status"
+        <p id="program-status"
+           class="request-status"
            role="status"
            aria-live="polite"></p>
 
       </form>
 
-      <div class="contact-buttons">
-
-        <a class="button"
-           href="mailto:tahac1836@gmail.com">
-          📧 راسلنا عبر البريد
-        </a>
-
-        <button class="button whatsapp-button"
-                type="button"
-                onclick="showWhatsAppMessage()">
-          💬 واتساب
-        </button>
-
+      <div class="approval-note">
+        🔐 <strong>تنبيه:</strong>
+        إرسال الطلب لا يعني الحصول على البرنامج تلقائيًا.
+        تتم مراجعة الطلب أولًا، ثم يتم التواصل معك والاتفاق على التفاصيل
+        قبل إرسال ملف التثبيت.
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </div>
 
-  <footer>
+</section>
 
-    <p>
-      © 2026 Taha Technologies Algeria — جميع الحقوق محفوظة
-    </p>
+<section id="testimonials" class="testimonials">
 
-    <p>
-      تقنيات تكنولوجية مبتكرة 🇩🇿
-    </p>
+  <h2>آراء العملاء</h2>
 
-    <p>
-      <a href="mailto:tahac1836@gmail.com">
-        تواصل معنا
-      </a>
-    </p>
+  <p>
+    نطمح دائمًا إلى تقديم تجربة رقمية مميزة وبناء علاقات طويلة الأمد مع عملائنا.
+  </p>
 
-  </footer>
+  <div class="testimonials-grid">
 
-  <button id="back-to-top"
-          type="button"
-          aria-label="العودة إلى الأعلى"
-          title="العودة إلى الأعلى">
-    ↑
-  </button>
+    <div class="testimonial-card reveal">
 
-  <script>
+      <div class="quote">“</div>
 
-    document.documentElement.classList.add("js");
+      <h3>عميلنا القادم</h3>
 
-    function showWhatsAppMessage(){
+      <p>
+        نسعى لتقديم حلول تقنية احترافية تساعد العملاء على تحقيق أهدافهم الرقمية.
+      </p>
 
-      alert(
-        "واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com"
-      );
+    </div>
 
-    }
+    <div class="testimonial-card reveal">
 
-    const backToTopButton =
-      document.getElementById("back-to-top");
+      <div class="quote">“</div>
 
-    window.addEventListener(
-      "scroll",
-      function(){
+      <h3>تجربة العميل</h3>
 
-        backToTopButton.style.display =
-          window.scrollY > 400 ? "block" : "none";
+      <p>
+        رضا العميل وجودة العمل هما من أهم أولويات Taha Technologies.
+      </p>
 
-      },
-      {passive:true}
-    );
+    </div>
 
-    backToTopButton.addEventListener(
-      "click",
-      function(){
+    <div class="testimonial-card reveal">
 
-        window.scrollTo({
-          top:0,
-          behavior:"smooth"
-        });
+      <div class="quote">“</div>
 
-      }
-    );
+      <h3>رؤيتنا</h3>
 
-    const revealElements =
-      document.querySelectorAll(".reveal");
+      <p>
+        نبني تقنيات تكنولوجية مبتكرة وحلولًا رقمية بسيطة وعصرية وقابلة للتطوير مع نمو المشروع.
+      </p>
 
-    if("IntersectionObserver" in window){
+    </div>
 
-      const revealObserver =
-        new IntersectionObserver(
-          function(entries){
+  </div>
 
-            entries.forEach(function(entry){
+</section>
 
-              if(entry.isIntersecting){
+<section id="contact" class="contact">
 
-                entry.target.classList.add("visible");
+  <h2>تواصل معنا</h2>
 
-                revealObserver.unobserve(entry.target);
+  <p>
+    لديك فكرة أو مشروع؟ اكتب لنا رسالتك وسنعمل على مساعدتك.
+  </p>
 
-              }
+  <form id="contact-form"
+        class="contact-form"
+        action="https://formspree.io/f/mjyydvkw"
+        method="POST">
 
-            });
+    <input type="hidden"
+           name="_subject"
+           value="رسالة جديدة من موقع Taha Technologies Algeria">
 
-          },
-          {threshold:0.12}
-        );
+    <label for="visitor-name">
+      الاسم
+    </label>
 
-      revealElements.forEach(
-        function(element){
-          revealObserver.observe(element);
-        }
-      );
+    <input id="visitor-name"
+           type="text"
+           name="name"
+           placeholder="اكتب اسمك"
+           autocomplete="name"
+           required>
 
-    }else{
+    <label for="visitor-email">
+      البريد الإلكتروني
+    </label>
 
-      revealElements.forEach(
-        function(element){
-          element.classList.add("visible");
-        }
-      );
+    <input id="visitor-email"
+           type="email"
+           name="email"
+           placeholder="example@email.com"
+           autocomplete="email"
+           required>
 
-    }
+    <label for="visitor-message">
+      الرسالة
+    </label>
 
-    const contactForm =
-      document.getElementById("contact-form");
+    <textarea id="visitor-message"
+              name="message"
+              placeholder="اكتب رسالتك هنا..."
+              required></textarea>
 
-    const formStatus =
-      document.getElementById("form-status");
+    <button id="submit-button"
+            class="button"
+            type="submit">
+      إرسال الرسالة
+    </button>
 
-    const submitButton =
-      document.getElementById("submit-button");
+    <p id="form-status"
+       role="status"
+       aria-live="polite"></p>
 
-    contactForm.addEventListener(
-      "submit",
-      async function(event){
+  </form>
 
-        event.preventDefault();
+  <div class="contact-buttons">
 
-        submitButton.disabled = true;
+    <a class="button"
+       href="mailto:tahac1836@gmail.com">
+      📧 راسلنا عبر البريد
+    </a>
 
-        submitButton.textContent =
-          "جارٍ الإرسال...";
+    <button class="button whatsapp-button"
+            type="button"
+            onclick="showWhatsAppMessage()">
+      💬 واتساب
+    </button>
 
-        formStatus.textContent = "";
+  </div>
 
-        try{
+</section>
 
-          const response =
-            await fetch(
-              contactForm.action,
-              {
-                method:"POST",
-                body:new FormData(contactForm),
-                headers:{
-                  "Accept":"application/json"
-                }
-              }
-            );
+</main>
 
-          if(response.ok){
+<footer>
 
-            formStatus.textContent =
-              "تم إرسال رسالتك بنجاح ✅ شكرًا لتواصلك معنا، سنراجع رسالتك ونرد عليك في أقرب وقت.";
+  <p>
+    © 2026 Taha Technologies Algeria — جميع الحقوق محفوظة
+  </p>
 
-            contactForm.reset();
+  <p>
+    تقنيات تكنولوجية مبتكرة 🇩🇿
+  </p>
 
-          }else{
+  <p>
+    <a href="mailto:tahac1836@gmail.com">
+      تواصل معنا
+    </a>
+  </p>
 
-            formStatus.textContent =
-              "تعذر إرسال الرسالة. تحقق من إعدادات Formspree وحاول مرة أخرى.";
+</footer>
+
+<button id="back-to-top"
+        type="button"
+        aria-label="العودة إلى الأعلى"
+        title="العودة إلى الأعلى">
+  ↑
+</button>
+
+<script>
+
+document.documentElement.classList.add("js");
+
+function showWhatsAppMessage(){
+
+  alert(
+    "واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com"
+  );
+
+}
+
+/* إظهار نموذج طلب البرنامج */
+
+function showRequestForm(){
+
+  const formBox =
+    document.getElementById("program-request");
+
+  formBox.style.display = "block";
+
+  formBox.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
+}
+
+/* زر العودة إلى الأعلى */
+
+const backToTopButton =
+  document.getElementById("back-to-top");
+
+window.addEventListener(
+  "scroll",
+  function(){
+
+    backToTopButton.style.display =
+      window.scrollY > 400 ? "block" : "none";
+
+  },
+  {passive:true}
+);
+
+backToTopButton.addEventListener(
+  "click",
+  function(){
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  }
+);
+
+/* الحركات */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+if("IntersectionObserver" in window){
+
+  const revealObserver =
+    new IntersectionObserver(
+      function(entries){
+
+        entries.forEach(function(entry){
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add("visible");
+
+            revealObserver.unobserve(entry.target);
 
           }
 
-        }catch(error){
+        });
 
-          formStatus.textContent =
-            "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
-
-        }finally{
-
-          submitButton.disabled = false;
-
-          submitButton.textContent =
-            "إرسال الرسالة";
-
-        }
-
-      }
+      },
+      {threshold:0.12}
     );
 
-  </script>
+  revealElements.forEach(
+    function(element){
+      revealObserver.observe(element);
+    }
+  );
+
+}else{
+
+  revealElements.forEach(
+    function(element){
+      element.classList.add("visible");
+    }
+  );
+
+}
+
+/* نموذج التواصل العام */
+
+const contactForm =
+  document.getElementById("contact-form");
+
+const formStatus =
+  document.getElementById("form-status");
+
+const submitButton =
+  document.getElementById("submit-button");
+
+contactForm.addEventListener(
+  "submit",
+  async function(event){
+
+    event.preventDefault();
+
+    submitButton.disabled = true;
+
+    submitButton.textContent =
+      "جارٍ الإرسال...";
+
+    formStatus.textContent = "";
+
+    try{
+
+      const response =
+        await fetch(
+          contactForm.action,
+          {
+            method:"POST",
+            body:new FormData(contactForm),
+            headers:{
+              "Accept":"application/json"
+            }
+          }
+        );
+
+      if(response.ok){
+
+        formStatus.textContent =
+          "تم إرسال رسالتك بنجاح ✅ شكرًا لتواصلك معنا، سنراجع رسالتك ونرد عليك في أقرب وقت.";
+
+        contactForm.reset();
+
+      }else{
+
+        formStatus.textContent =
+          "تعذر إرسال الرسالة. تحقق من إعدادات Formspree وحاول مرة أخرى.";
+
+      }
+
+    }catch(error){
+
+      formStatus.textContent =
+        "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
+
+    }finally{
+
+      submitButton.disabled = false;
+
+      submitButton.textContent =
+        "إرسال الرسالة";
+
+    }
+
+  }
+);
+
+/* نموذج طلب T.N.I.A Market Pro */
+
+const programRequestForm =
+  document.getElementById("program-request-form");
+
+const programStatus =
+  document.getElementById("program-status");
+
+const programSubmit =
+  document.getElementById("program-submit");
+
+programRequestForm.addEventListener(
+  "submit",
+  async function(event){
+
+    event.preventDefault();
+
+    programSubmit.disabled = true;
+
+    programSubmit.textContent =
+      "جارٍ إرسال الطلب...";
+
+    programStatus.textContent = "";
+
+    try{
+
+      const response =
+        await fetch(
+          programRequestForm.action,
+          {
+            method:"POST",
+            body:new FormData(programRequestForm),
+            headers:{
+              "Accept":"application/json"
+            }
+          }
+        );
+
+      if(response.ok){
+
+        programStatus.textContent =
+          "تم إرسال طلبك بنجاح ✅ سنراجع الطلب ونتواصل معك عبر البريد أو الهاتف.";
+
+        programRequestForm.reset();
+
+      }else{
+
+        programStatus.textContent =
+          "تعذر إرسال الطلب. يرجى المحاولة مرة أخرى.";
+
+      }
+
+    }catch(error){
+
+      programStatus.textContent =
+        "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
+
+    }finally{
+
+      programSubmit.disabled = false;
+
+      programSubmit.textContent =
+        "إرسال طلب البرنامج";
+
+    }
+
+  }
+);
+
+</script>
 
 </body>
 </html>
-```
