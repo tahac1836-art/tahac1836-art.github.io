@@ -6,8 +6,8 @@
 
   <title>Taha Technologies Algeria | تقنيات تكنولوجية مبتكرة</title>
 
-  <meta name="description" content="Taha Technologies Algeria — تقنيات تكنولوجية مبتكرة، تطوير المواقع، البرمجة، التصميم، المشاريع الرقمية وتطبيقات Android مثل T.N.I.A Market Pro.">
-  <meta name="keywords" content="Taha Technologies Algeria, Taha Technologies, الجزائر, تقنيات تكنولوجية مبتكرة, تطوير المواقع, البرمجة, التصميم, حلول تقنية, مشاريع رقمية, تطبيقات Android, T.N.I.A Market Pro">
+  <meta name="description" content="Taha Technologies Algeria — تقنيات تكنولوجية مبتكرة، تطوير المواقع، البرمجة، التصميم، المشاريع الرقمية وتطبيقات Android مثل T.N.I.A Market Pro وHR Pro.">
+  <meta name="keywords" content="Taha Technologies Algeria, Taha Technologies, الجزائر, تقنيات تكنولوجية مبتكرة, تطوير المواقع, البرمجة, التصميم, حلول تقنية, مشاريع رقمية, تطبيقات Android, T.N.I.A Market Pro, HR Pro, الموارد البشرية, الرواتب">
   <meta name="author" content="Taha Technologies Algeria">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0b1220">
@@ -62,864 +62,168 @@
       --gold:#f59e0b;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box
-    }
-
-    html{
-      scroll-behavior:smooth;
-      scroll-padding-top:100px
-    }
-
-    body{
-      font-family:Arial,Tahoma,sans-serif;
-      background:var(--background);
-      color:var(--text);
-      line-height:1.8;
-      overflow-x:hidden
-    }
-
-    a{
-      -webkit-tap-highlight-color:transparent
-    }
-
-    button,input,textarea{
-      font-family:inherit
-    }
-
-    .skip-link{
-      position:absolute;
-      top:-60px;
-      right:15px;
-      background:var(--primary);
-      color:#07111f;
-      padding:10px 18px;
-      border-radius:8px;
-      z-index:3000
-    }
-
-    .skip-link:focus{
-      top:10px
-    }
-
-    nav{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(11,18,32,.96);
-      border-bottom:1px solid var(--border);
-      padding:12px 7%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      backdrop-filter:blur(12px)
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      flex-shrink:0
-    }
-
-    .logo img{
-      width:180px;
-      height:55px;
-      object-fit:contain;
-      display:block
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:8px
-    }
-
-    nav a{
-      color:#e2e8f0;
-      text-decoration:none;
-      padding:7px 10px;
-      border-radius:7px;
-      transition:.3s;
-      font-size:15px
-    }
-
-    nav a:hover,
-    nav a:focus-visible{
-      color:var(--primary);
-      background:rgba(56,189,248,.08)
-    }
-
-    .hero{
-      min-height:88vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:70px 20px;
-      background:
-        radial-gradient(circle at 50% 0%,#172554 0%,transparent 55%),
-        var(--background)
-    }
-
-    .hero-content{
-      width:min(1120px,100%);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:clamp(28px,6vw,78px);
-      text-align:right;
-      animation:fadeUp 1s ease both
-    }
-
-    .hero-copy{
-      flex:1;
-      min-width:0
-    }
-
-    .hero-brand{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      margin-bottom:12px
-    }
-
-    .hero h1{
-      font-size:clamp(34px,5.5vw,66px);
-      color:var(--primary);
-      margin:0;
-      line-height:1.2;
-      direction:ltr;
-      text-align:right
-    }
-
-    .hero h2{
-      font-size:clamp(23px,3vw,34px);
-      margin:10px 0 20px
-    }
-
-    .hero-emblem{
-      width:clamp(190px,27vw,310px);
-      flex:0 0 auto;
-      display:grid;
-      place-items:center;
-      position:relative;
-      isolation:isolate
-    }
-
-    .hero-emblem:before{
-      content:"";
-      position:absolute;
-      inset:12%;
-      border-radius:50%;
-      background:rgba(14,165,233,.2);
-      filter:blur(35px);
-      z-index:-1;
-      animation:heroGlow 3.5s ease-in-out infinite
-    }
-
-    .hero-emblem img{
-      display:block;
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      filter:drop-shadow(0 0 22px rgba(56,189,248,.3));
-      animation:heroFloat 4.5s ease-in-out infinite
-    }
-
-    @keyframes heroFloat{
-      0%,100%{transform:translateY(0) rotate(-1deg)}
-      50%{transform:translateY(-12px) rotate(1deg)}
-    }
-
-    @keyframes heroGlow{
-      0%,100%{opacity:.55;transform:scale(.9)}
-      50%{opacity:1;transform:scale(1.08)}
-    }
-
-    .hero p{
-      color:var(--muted);
-      font-size:19px;
-      margin-bottom:32px
-    }
-
-    .button{
-      display:inline-block;
-      background:var(--primary);
-      color:#07111f;
-      padding:12px 27px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:.3s;
-      border:none;
-      cursor:pointer;
-      font-size:16px
-    }
-
-    .button:hover{
-      transform:translateY(-3px);
-      background:var(--primary-light);
-      box-shadow:0 8px 22px rgba(56,189,248,.18)
-    }
-
-    .button:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible{
-      outline:2px solid var(--primary-light);
-      outline-offset:3px
-    }
-
-    .whatsapp-button{
-      background:var(--green);
-      color:white;
-      margin-right:10px
-    }
-
-    .whatsapp-button:hover{
-      background:#4ade80
-    }
-
-    section{
-      padding:85px 8%;
-      text-align:center
-    }
-
-    section h2{
-      color:var(--primary);
-      font-size:clamp(27px,4vw,36px);
-      margin-bottom:18px
-    }
-
-    section>p{
-      max-width:750px;
-      margin:auto;
-      color:var(--muted);
-      font-size:18px
-    }
-
-    .about,
-    .contact{
-      background:var(--surface)
-    }
-
-    .services,
-    .testimonials{
-      background:#111827
-    }
-
-    .projects{
-      background:var(--background)
-    }
-
-    .cards,
-    .projects-grid,
-    .testimonials-grid{
-      max-width:1100px;
-      margin:42px auto 0;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:24px
-    }
-
-    .card,
-    .project-card,
-    .testimonial-card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:15px;
-      padding:28px 20px;
-      transition:transform .3s,border-color .3s,box-shadow .3s
-    }
-
-    .card:hover,
-    .project-card:hover,
-    .testimonial-card:hover{
-      transform:translateY(-7px);
-      border-color:var(--primary);
-      box-shadow:0 12px 28px rgba(0,0,0,.18)
-    }
-
-    .icon{
-      font-size:43px;
-      margin-bottom:10px
-    }
-
-    .card h3,
-    .project-card h3,
-    .testimonial-card h3{
-      font-size:21px;
-      margin-bottom:10px
-    }
-
-    .card p,
-    .project-card p,
-    .testimonial-card p{
-      color:var(--muted);
-      font-size:16px
-    }
-
-    .project-icon{
-      font-size:48px;
-      margin-bottom:12px
-    }
-
-    .project-card p{
-      margin-bottom:18px
-    }
-
-    .project-card span{
-      display:inline-block;
-      padding:5px 14px;
-      border-radius:20px;
-      background:#172554;
-      color:var(--primary-light);
-      font-size:13px
-    }
-
-    .app-section{
-      background:
-        radial-gradient(circle at 50% 20%,rgba(14,165,233,.12),transparent 45%),
-        #0b1220
-    }
-
-    .app-card{
-      max-width:1100px;
-      margin:40px auto 0;
-      background:linear-gradient(145deg,#182235,#101827);
-      border:1px solid rgba(56,189,248,.35);
-      border-radius:22px;
-      padding:35px;
-      text-align:right;
-      box-shadow:0 15px 45px rgba(0,0,0,.28)
-    }
-
-    .app-top{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-      align-items:center
-    }
-
-    .app-info h3{
-      font-size:32px;
-      color:var(--primary);
-      margin-bottom:12px
-    }
-
-    .app-info .app-subtitle{
-      font-size:19px;
-      color:#fff;
-      margin-bottom:15px
-    }
-
-    .app-info p{
-      color:var(--muted);
-      font-size:17px;
-      margin-bottom:20px
-    }
-
-    .app-badges{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:20px 0
-    }
-
-    .app-badge{
-      display:inline-block;
-      background:#172554;
-      border:1px solid #334155;
-      color:var(--primary-light);
-      padding:7px 14px;
-      border-radius:30px;
-      font-size:14px
-    }
-
-    .app-price{
-      margin:22px 0;
-      padding:15px 18px;
-      background:rgba(34,197,94,.08);
-      border:1px solid rgba(34,197,94,.35);
-      border-radius:12px;
-      color:#dcfce7;
-      font-size:18px
-    }
-
-    .app-price strong{
-      color:#4ade80
-    }
-
-    .app-buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:22px
-    }
-
-    .app-buttons .button{
-      text-align:center
-    }
-
-    .app-visual{
-      min-height:330px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:1px dashed #475569;
-      border-radius:18px;
-      background:rgba(15,23,42,.7);
-      padding:25px;
-      text-align:center;
-      overflow:hidden
-    }
-
-    .app-image{
-      width:100%;
-      height:auto;
-      max-height:520px;
-      object-fit:contain;
-      border-radius:12px;
-      display:block
-    }
-
-    .video-box{
-      width:100%;
-      margin-top:28px;
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid #334155;
-      background:#050b14
-    }
-
-    .video-box video{
-      display:block;
-      width:100%;
-      height:auto;
-      max-height:650px
-    }
-
-    .app-features{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:15px;
-      margin-top:28px
-    }
-
-    .feature{
-      background:#101827;
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:18px;
-      text-align:center
-    }
-
-    .feature-icon{
-      font-size:30px;
-      margin-bottom:5px
-    }
-
-    .feature h4{
-      color:#fff;
-      margin-bottom:5px
-    }
-
-    .feature p{
-      color:var(--muted);
-      font-size:14px
-    }
-
-    .app-note{
-      margin-top:25px;
-      padding:18px;
-      border-radius:12px;
-      background:#111827;
-      border-right:4px solid var(--primary);
-      color:var(--muted);
-      font-size:15px
-    }
-
-    .request-box{
-      margin-top:32px;
-      padding:28px;
-      background:#0f172a;
-      border:1px solid rgba(56,189,248,.35);
-      border-radius:18px
-    }
-
-    .request-box h4{
-      color:var(--primary);
-      font-size:23px;
-      margin-bottom:8px
-    }
-
-    .request-box>p{
-      color:var(--muted);
-      margin-bottom:20px
-    }
-
-    .request-form{
-      display:grid;
-      gap:14px
-    }
-
-    .request-form label{
-      color:#e2e8f0;
-      font-weight:bold;
-      text-align:right
-    }
-
-    .request-form input,
-    .request-form textarea{
-      width:100%;
-      padding:13px 14px;
-      border-radius:8px;
-      border:1px solid #475569;
-      background:#0b1220;
-      color:white;
-      font:inherit;
-      outline:none
-    }
-
-    .request-form input:focus,
-    .request-form textarea:focus{
-      border-color:var(--primary)
-    }
-
-    .request-form textarea{
-      min-height:120px;
-      resize:vertical
-    }
-
-    .request-form button{
-      margin-top:5px
-    }
-
-    .request-status{
-      min-height:30px;
-      margin-top:10px;
-      text-align:center;
-      color:var(--primary-light)
-    }
-
-    .approval-note{
-      margin-top:15px;
-      padding:12px 15px;
-      border-radius:10px;
-      background:rgba(245,158,11,.08);
-      border:1px solid rgba(245,158,11,.3);
-      color:#fde68a;
-      font-size:14px
-    }
-
-    .testimonial-card{
-      text-align:right
-    }
-
-    .testimonial-card .quote{
-      font-size:38px;
-      color:var(--primary);
-      margin-bottom:8px;
-      line-height:1
-    }
-
-    .testimonial-card h3{
-      color:var(--primary-light)
-    }
-
-    .contact-form{
-      max-width:650px;
-      margin:35px auto 0;
-      padding:28px;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:15px;
-      text-align:right
-    }
-
-    .contact-form label{
-      display:block;
-      margin:14px 0 6px;
-      color:#e2e8f0;
-      font-weight:bold
-    }
-
-    .contact-form input,
-    .contact-form textarea{
-      width:100%;
-      padding:13px 14px;
-      border-radius:8px;
-      border:1px solid #475569;
-      background:var(--background);
-      color:white;
-      font:inherit;
-      outline:none
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus{
-      border-color:var(--primary)
-    }
-
-    .contact-form textarea{
-      min-height:140px;
-      resize:vertical
-    }
-
-    .contact-form button{
-      margin-top:18px;
-      width:100%
-    }
-
-    .contact-form button:disabled,
-    .request-form button:disabled{
-      opacity:.65;
-      cursor:wait;
-      transform:none
-    }
-
-    #form-status{
-      margin-top:15px;
-      text-align:center;
-      color:var(--primary-light);
-      min-height:28px
-    }
-
-    .contact-buttons{
-      margin-top:28px
-    }
-
-    .contact-buttons .button{
-      margin-left:10px
-    }
-
-    #back-to-top{
-      position:fixed;
-      bottom:25px;
-      left:25px;
-      width:48px;
-      height:48px;
-      border:none;
-      border-radius:50%;
-      background:var(--primary);
-      color:#07111f;
-      font-size:24px;
-      font-weight:bold;
-      cursor:pointer;
-      display:none;
-      z-index:2000;
-      box-shadow:0 4px 15px rgba(0,0,0,.35);
-      transition:.3s
-    }
-
-    #back-to-top:hover{
-      transform:translateY(-4px);
-      background:var(--primary-light)
-    }
-
-    footer{
-      background:#070d18;
-      color:#94a3b8;
-      text-align:center;
-      padding:25px 15px;
-      font-size:14px
-    }
-
-    footer a{
-      color:var(--primary);
-      text-decoration:none
-    }
-
-    @keyframes fadeUp{
-      from{
-        opacity:0;
-        transform:translateY(25px)
-      }
-      to{
-        opacity:1;
-        transform:translateY(0)
-      }
-    }
-
-    html.js .reveal{
-      opacity:0;
-      transform:translateY(25px);
-      transition:opacity .7s ease,transform .7s ease
-    }
-
-    html.js .reveal.visible{
-      opacity:1;
-      transform:translateY(0)
-    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{font-family:Arial,Tahoma,sans-serif;background:var(--background);color:var(--text);line-height:1.8;overflow-x:hidden}
+    a{-webkit-tap-highlight-color:transparent}
+    button,input,textarea{font-family:inherit}
+
+    .skip-link{position:absolute;top:-60px;right:15px;background:var(--primary);color:#07111f;padding:10px 18px;border-radius:8px;z-index:3000}
+    .skip-link:focus{top:10px}
+
+    nav{position:sticky;top:0;z-index:1000;background:rgba(11,18,32,.96);border-bottom:1px solid var(--border);padding:12px 7%;display:flex;justify-content:space-between;align-items:center;gap:20px;backdrop-filter:blur(12px)}
+    .logo{display:flex;align-items:center;flex-shrink:0}
+    .logo img{width:180px;height:55px;object-fit:contain;display:block}
+    .nav-links{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+    nav a{color:#e2e8f0;text-decoration:none;padding:7px 10px;border-radius:7px;transition:.3s;font-size:15px}
+    nav a:hover,nav a:focus-visible{color:var(--primary);background:rgba(56,189,248,.08)}
+
+    .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px;background:radial-gradient(circle at 50% 0%,#172554 0%,transparent 55%),var(--background)}
+    .hero-content{width:min(1120px,100%);display:flex;align-items:center;justify-content:center;gap:clamp(28px,6vw,78px);text-align:right;animation:fadeUp 1s ease both}
+    .hero-copy{flex:1;min-width:0}
+    .hero-brand{display:flex;align-items:center;gap:18px;margin-bottom:12px}
+    .hero h1{font-size:clamp(34px,5.5vw,66px);color:var(--primary);margin:0;line-height:1.2;direction:ltr;text-align:right}
+    .hero h2{font-size:clamp(23px,3vw,34px);margin:10px 0 20px}
+    .hero-emblem{width:clamp(190px,27vw,310px);flex:0 0 auto;display:grid;place-items:center;position:relative;isolation:isolate}
+    .hero-emblem:before{content:"";position:absolute;inset:12%;border-radius:50%;background:rgba(14,165,233,.2);filter:blur(35px);z-index:-1;animation:heroGlow 3.5s ease-in-out infinite}
+    .hero-emblem img{display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 0 22px rgba(56,189,248,.3));animation:heroFloat 4.5s ease-in-out infinite}
+    @keyframes heroFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+    @keyframes heroGlow{0%,100%{opacity:.55;transform:scale(.9)}50%{opacity:1;transform:scale(1.08)}}
+    .hero p{color:var(--muted);font-size:19px;margin-bottom:32px}
+
+    .button{display:inline-block;background:var(--primary);color:#07111f;padding:12px 27px;border-radius:8px;text-decoration:none;font-weight:bold;transition:.3s;border:none;cursor:pointer;font-size:16px}
+    .button:hover{transform:translateY(-3px);background:var(--primary-light);box-shadow:0 8px 22px rgba(56,189,248,.18)}
+    .button:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--primary-light);outline-offset:3px}
+    .whatsapp-button{background:var(--green);color:white;margin-right:10px}
+    .whatsapp-button:hover{background:#4ade80}
+
+    section{padding:85px 8%;text-align:center}
+    section h2{color:var(--primary);font-size:clamp(27px,4vw,36px);margin-bottom:18px}
+    section>p{max-width:750px;margin:auto;color:var(--muted);font-size:18px}
+    .about,.contact{background:var(--surface)}
+    .services,.testimonials{background:#111827}
+    .projects{background:var(--background)}
+
+    .cards,.projects-grid,.testimonials-grid{max-width:1100px;margin:42px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+    .card,.project-card,.testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:28px 20px;transition:transform .3s,border-color .3s,box-shadow .3s}
+    .card:hover,.project-card:hover,.testimonial-card:hover{transform:translateY(-7px);border-color:var(--primary);box-shadow:0 12px 28px rgba(0,0,0,.18)}
+    .icon{font-size:43px;margin-bottom:10px}
+    .card h3,.project-card h3,.testimonial-card h3{font-size:21px;margin-bottom:10px}
+    .card p,.project-card p,.testimonial-card p{color:var(--muted);font-size:16px}
+    .project-icon{font-size:48px;margin-bottom:12px}
+    .project-card p{margin-bottom:18px}
+    .project-card span{display:inline-block;padding:5px 14px;border-radius:20px;background:#172554;color:var(--primary-light);font-size:13px}
+
+    .app-section{background:radial-gradient(circle at 50% 20%,rgba(14,165,233,.12),transparent 45%),#0b1220}
+    .app-card{max-width:1100px;margin:40px auto 0;background:linear-gradient(145deg,#182235,#101827);border:1px solid rgba(56,189,248,.35);border-radius:22px;padding:35px;text-align:right;box-shadow:0 15px 45px rgba(0,0,0,.28)}
+    .app-top{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .app-info h3{font-size:32px;color:var(--primary);margin-bottom:12px}
+    .app-info .app-subtitle{font-size:19px;color:#fff;margin-bottom:15px}
+    .app-info p{color:var(--muted);font-size:17px;margin-bottom:20px}
+    .app-badges{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+    .app-badge{display:inline-block;background:#172554;border:1px solid #334155;color:var(--primary-light);padding:7px 14px;border-radius:30px;font-size:14px}
+    .app-price{margin:22px 0;padding:15px 18px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.35);border-radius:12px;color:#dcfce7;font-size:18px}
+    .app-price strong{color:#4ade80}
+    .app-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .app-buttons .button{text-align:center}
+    .app-visual{min-height:330px;display:flex;align-items:center;justify-content:center;border:1px dashed #475569;border-radius:18px;background:rgba(15,23,42,.7);padding:25px;text-align:center;overflow:hidden}
+    .app-image{width:100%;height:auto;max-height:520px;object-fit:contain;border-radius:12px;display:block}
+    .video-box{width:100%;margin-top:28px;border-radius:18px;overflow:hidden;border:1px solid #334155;background:#050b14}
+    .video-box video{display:block;width:100%;height:auto;max-height:650px}
+    .app-features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}
+    .feature{background:#101827;border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
+    .feature-icon{font-size:30px;margin-bottom:5px}
+    .feature h4{color:#fff;margin-bottom:5px}
+    .feature p{color:var(--muted);font-size:14px}
+    .app-note{margin-top:25px;padding:18px;border-radius:12px;background:#111827;border-right:4px solid var(--primary);color:var(--muted);font-size:15px}
+
+    /* HR Pro gallery */
+    .hr-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .hr-gallery figure{margin:0;background:#0b1220;border:1px solid #334155;border-radius:14px;padding:8px;overflow:hidden}
+    .hr-gallery img{display:block;width:100%;height:220px;object-fit:cover;border-radius:10px;transition:transform .3s}
+    .hr-gallery figure:hover img{transform:scale(1.03)}
+    .hr-gallery figcaption{padding:8px 4px 2px;color:#cbd5e1;font-size:13px;text-align:center}
+
+    .request-box{margin-top:32px;padding:28px;background:#0f172a;border:1px solid rgba(56,189,248,.35);border-radius:18px}
+    .request-box h4{color:var(--primary);font-size:23px;margin-bottom:8px}
+    .request-box>p{color:var(--muted);margin-bottom:20px}
+    .request-form{display:grid;gap:14px}
+    .request-form label{color:#e2e8f0;font-weight:bold;text-align:right}
+    .request-form input,.request-form textarea{width:100%;padding:13px 14px;border-radius:8px;border:1px solid #475569;background:#0b1220;color:white;font:inherit;outline:none}
+    .request-form input:focus,.request-form textarea:focus{border-color:var(--primary)}
+    .request-form textarea{min-height:120px;resize:vertical}
+    .request-form button{margin-top:5px}
+    .request-status{min-height:30px;margin-top:10px;text-align:center;color:var(--primary-light)}
+    .approval-note{margin-top:15px;padding:12px 15px;border-radius:10px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);color:#fde68a;font-size:14px}
+
+    .testimonial-card{text-align:right}
+    .testimonial-card .quote{font-size:38px;color:var(--primary);margin-bottom:8px;line-height:1}
+    .testimonial-card h3{color:var(--primary-light)}
+
+    .contact-form{max-width:650px;margin:35px auto 0;padding:28px;background:var(--card);border:1px solid var(--border);border-radius:15px;text-align:right}
+    .contact-form label{display:block;margin:14px 0 6px;color:#e2e8f0;font-weight:bold}
+    .contact-form input,.contact-form textarea{width:100%;padding:13px 14px;border-radius:8px;border:1px solid #475569;background:var(--background);color:white;font:inherit;outline:none}
+    .contact-form input:focus,.contact-form textarea:focus{border-color:var(--primary)}
+    .contact-form textarea{min-height:140px;resize:vertical}
+    .contact-form button{margin-top:18px;width:100%}
+    .contact-form button:disabled,.request-form button:disabled{opacity:.65;cursor:wait;transform:none}
+    #form-status{margin-top:15px;text-align:center;color:var(--primary-light);min-height:28px}
+    .contact-buttons{margin-top:28px}
+    .contact-buttons .button{margin-left:10px}
+
+    #back-to-top{position:fixed;bottom:25px;left:25px;width:48px;height:48px;border:none;border-radius:50%;background:var(--primary);color:#07111f;font-size:24px;font-weight:bold;cursor:pointer;display:none;z-index:2000;box-shadow:0 4px 15px rgba(0,0,0,.35);transition:.3s}
+    #back-to-top:hover{transform:translateY(-4px);background:var(--primary-light)}
+
+    footer{background:#070d18;color:#94a3b8;text-align:center;padding:25px 15px;font-size:14px}
+    footer a{color:var(--primary);text-decoration:none}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+    html.js .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+    html.js .reveal.visible{opacity:1;transform:translateY(0)}
 
     @media(max-width:850px){
-      nav{
-        flex-direction:column;
-        gap:8px;
-        padding:12px 5%
-      }
-
-      .nav-links{
-        justify-content:center
-      }
-
-      nav a{
-        font-size:14px;
-        padding:5px 7px
-      }
-
-      .hero{
-        min-height:75vh
-      }
-
-      .hero-content{
-        gap:22px
-      }
-
-      .hero-emblem{
-        width:clamp(160px,25vw,220px)
-      }
-
-      .app-top{
-        grid-template-columns:1fr
-      }
-
-      .app-visual{
-        min-height:260px
-      }
+      nav{flex-direction:column;gap:8px;padding:12px 5%}
+      .nav-links{justify-content:center}
+      nav a{font-size:14px;padding:5px 7px}
+      .hero{min-height:75vh}
+      .hero-content{gap:22px}
+      .hero-emblem{width:clamp(160px,25vw,220px)}
+      .app-top{grid-template-columns:1fr}
+      .app-visual{min-height:260px}
+      .hr-gallery{grid-template-columns:repeat(2,1fr)}
     }
 
     @media(max-width:600px){
-      .logo img{
-        width:155px;
-        height:48px
-      }
-
-      .hero-content{
-        flex-direction:column-reverse;
-        text-align:center;
-        gap:8px
-      }
-
-      .hero-copy{
-        text-align:center
-      }
-
-      .hero-brand{
-        justify-content:center;
-        flex-direction:column;
-        gap:5px
-      }
-
-      .hero h1{
-        font-size:clamp(32px,9vw,43px);
-        text-align:center
-      }
-
-      .hero h2{
-        font-size:23px;
-        margin:8px 0 15px
-      }
-
-      .hero p{
-        font-size:16px
-      }
-
-      .hero-emblem{
-        width:min(58vw,220px);
-        margin-bottom:4px
-      }
-
-      section{
-        padding:65px 6%
-      }
-
-      section>p{
-        font-size:16px
-      }
-
-      .cards,
-      .projects-grid,
-      .testimonials-grid{
-        grid-template-columns:1fr;
-        gap:18px
-      }
-
-      .contact-form{
-        padding:20px
-      }
-
-      .contact-buttons{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:12px
-      }
-
-      .contact-buttons .button{
-        margin:0;
-        width:100%;
-        max-width:280px;
-        text-align:center
-      }
-
-      .app-card{
-        padding:22px 17px
-      }
-
-      .app-info h3{
-        font-size:27px
-      }
-
-      .app-info .app-subtitle{
-        font-size:17px
-      }
-
-      .app-info p{
-        font-size:16px
-      }
-
-      .app-features{
-        grid-template-columns:1fr
-      }
-
-      .app-buttons{
-        flex-direction:column
-      }
-
-      .app-buttons .button{
-        width:100%;
-        text-align:center
-      }
-
-      .request-box{
-        padding:20px 16px
-      }
-
-      #back-to-top{
-        bottom:18px;
-        left:18px;
-        width:44px;
-        height:44px;
-        font-size:21px
-      }
+      .logo img{width:155px;height:48px}
+      .hero-content{flex-direction:column-reverse;text-align:center;gap:8px}
+      .hero-copy{text-align:center}
+      .hero-brand{justify-content:center;flex-direction:column;gap:5px}
+      .hero h1{font-size:clamp(32px,9vw,43px);text-align:center}
+      .hero h2{font-size:23px;margin:8px 0 15px}
+      .hero p{font-size:16px}
+      .hero-emblem{width:min(58vw,220px);margin-bottom:4px}
+      section{padding:65px 6%}
+      section>p{font-size:16px}
+      .cards,.projects-grid,.testimonials-grid{grid-template-columns:1fr;gap:18px}
+      .contact-form{padding:20px}
+      .contact-buttons{display:flex;flex-direction:column;align-items:center;gap:12px}
+      .contact-buttons .button{margin:0;width:100%;max-width:280px;text-align:center}
+      .app-card{padding:22px 17px}
+      .app-info h3{font-size:27px}
+      .app-info .app-subtitle{font-size:17px}
+      .app-info p{font-size:16px}
+      .app-features{grid-template-columns:1fr}
+      .app-buttons{flex-direction:column}
+      .app-buttons .button{width:100%;text-align:center}
+      .request-box{padding:20px 16px}
+      .hr-gallery{grid-template-columns:1fr}
+      .hr-gallery img{height:auto;max-height:420px}
+      #back-to-top{bottom:18px;left:18px;width:44px;height:44px;font-size:21px}
     }
 
     @media(prefers-reduced-motion:reduce){
-      html{
-        scroll-behavior:auto
-      }
-
-      *,
-      *::before,
-      *::after{
-        animation-duration:.01ms!important;
-        transition-duration:.01ms!important
-      }
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
     }
   </style>
 </head>
@@ -929,15 +233,8 @@
 <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
 
 <nav aria-label="القائمة الرئيسية">
-
-  <a class="logo"
-     href="#top"
-     aria-label="Taha Technologies Algeria - الصفحة الرئيسية">
-
-    <img src="شعار طه للتقنيات المبتكرة.png"
-         alt="شعار Taha Technologies Algeria"
-         fetchpriority="high">
-
+  <a class="logo" href="#top" aria-label="Taha Technologies Algeria - الصفحة الرئيسية">
+    <img src="شعار طه للتقنيات المبتكرة.png" alt="شعار Taha Technologies Algeria" fetchpriority="high">
   </a>
 
   <div class="nav-links">
@@ -948,17 +245,13 @@
     <a href="#testimonials">آراء العملاء</a>
     <a href="#contact">تواصل معنا</a>
   </div>
-
 </nav>
 
 <main id="main-content">
 
 <header id="top" class="hero">
-
   <div class="hero-content">
-
     <div class="hero-copy">
-
       <div class="hero-brand">
         <h1>Taha Technologies</h1>
       </div>
@@ -973,120 +266,80 @@
         نحول أفكارك إلى حلول رقمية ومواقع احترافية باستخدام التكنولوجيا الحديثة.
       </p>
 
-      <a class="button" href="#services">
-        اكتشف خدماتنا
-      </a>
-
+      <a class="button" href="#services">اكتشف خدماتنا</a>
     </div>
 
     <div class="hero-emblem">
-
-      <img src="CHOUIKHI-TAHAR-3D.gif"
-           alt="الشعار المتحرك ثلاثي الأبعاد CHOUIKHI TAHAR"
-           fetchpriority="high">
-
+      <img src="CHOUIKHI-TAHAR-3D.gif" alt="الشعار المتحرك ثلاثي الأبعاد CHOUIKHI TAHAR" fetchpriority="high">
     </div>
-
   </div>
-
 </header>
 
 <section id="about" class="about reveal">
-
   <h2>من نحن</h2>
-
   <p>
     Taha Technologies Algeria هي منصة تقنية تهدف إلى تقديم تقنيات تكنولوجية مبتكرة
     وحلول رقمية حديثة وبسيطة واحترافية للأفراد والمشاريع والأعمال.
   </p>
-
 </section>
 
 <section id="services" class="services">
-
   <h2>خدماتنا</h2>
-
-  <p>
-    نقدم مجموعة من الخدمات التقنية لمساعدتك على بناء حضور رقمي قوي.
-  </p>
+  <p>نقدم مجموعة من الخدمات التقنية لمساعدتك على بناء حضور رقمي قوي.</p>
 
   <div class="cards">
-
     <div class="card reveal">
       <div class="icon">🌐</div>
       <h3>تطوير المواقع</h3>
-      <p>
-        إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز على الهاتف والكمبيوتر.
-      </p>
+      <p>إنشاء مواقع حديثة ومتجاوبة تعمل بشكل ممتاز على الهاتف والكمبيوتر.</p>
     </div>
 
     <div class="card reveal">
       <div class="icon">💻</div>
       <h3>البرمجة</h3>
-      <p>
-        تطوير حلول وبرامج رقمية تناسب احتياجات المشاريع والأعمال.
-      </p>
+      <p>تطوير حلول وبرامج رقمية تناسب احتياجات المشاريع والأعمال.</p>
     </div>
 
     <div class="card reveal">
       <div class="icon">🎨</div>
       <h3>التصميم</h3>
-      <p>
-        تصميم واجهات جذابة وسهلة الاستخدام للمشاريع والمواقع الرقمية.
-      </p>
+      <p>تصميم واجهات جذابة وسهلة الاستخدام للمشاريع والمواقع الرقمية.</p>
     </div>
 
     <div class="card reveal">
       <div class="icon">🚀</div>
       <h3>المشاريع الرقمية</h3>
-      <p>
-        تحويل الأفكار إلى مشاريع رقمية قابلة للتطوير والنمو.
-      </p>
+      <p>تحويل الأفكار إلى مشاريع رقمية قابلة للتطوير والنمو.</p>
     </div>
-
   </div>
-
 </section>
 
 <section id="projects" class="projects">
-
   <h2>مشاريعنا</h2>
-
-  <p>
-    بعض المشاريع والأعمال التي نعمل عليها في Taha Technologies Algeria.
-  </p>
+  <p>بعض المشاريع والأعمال التي نعمل عليها في Taha Technologies Algeria.</p>
 
   <div class="projects-grid">
-
     <div class="project-card reveal">
       <div class="project-icon">🌐</div>
       <h3>مشروع موقع إلكتروني</h3>
-      <p>
-        تصميم وتطوير موقع إلكتروني حديث ومتجاوب مع مختلف الأجهزة.
-      </p>
+      <p>تصميم وتطوير موقع إلكتروني حديث ومتجاوب مع مختلف الأجهزة.</p>
       <span>قيد التطوير</span>
     </div>
 
     <div class="project-card reveal">
       <div class="project-icon">💻</div>
       <h3>مشروع برمجي</h3>
-      <p>
-        تطوير حل برمجي يساعد على تحسين وتنظيم الأعمال الرقمية.
-      </p>
+      <p>تطوير حل برمجي يساعد على تحسين وتنظيم الأعمال الرقمية.</p>
       <span>قيد التطوير</span>
     </div>
 
     <div class="project-card reveal">
       <div class="project-icon">🚀</div>
       <h3>مشروع رقمي</h3>
-      <p>
-        تحويل فكرة مبتكرة إلى مشروع رقمي قابل للتطوير والنمو.
-      </p>
+      <p>تحويل فكرة مبتكرة إلى مشروع رقمي قابل للتطوير والنمو.</p>
       <span>قريبًا</span>
     </div>
-
   </div>
-
 </section>
 
 <section id="apps" class="app-section">
@@ -1098,12 +351,11 @@
     على تنظيم أعمالهم بطريقة بسيطة وعصرية.
   </p>
 
+  <!-- T.N.I.A Market Pro -->
   <div class="app-card reveal">
 
     <div class="app-top">
-
       <div class="app-info">
-
         <h3>T.N.I.A Market Pro</h3>
 
         <div class="app-subtitle">
@@ -1116,19 +368,9 @@
         </p>
 
         <div class="app-badges">
-
-          <span class="app-badge">
-            📱 Android
-          </span>
-
-          <span class="app-badge">
-            🎁 تجربة مجانية 3 أيام
-          </span>
-
-          <span class="app-badge">
-            🔐 نظام ترخيص
-          </span>
-
+          <span class="app-badge">📱 Android</span>
+          <span class="app-badge">🎁 تجربة مجانية 3 أيام</span>
+          <span class="app-badge">🔐 نظام ترخيص</span>
         </div>
 
         <div class="app-price">
@@ -1136,105 +378,61 @@
         </div>
 
         <div class="app-buttons">
-
-          <button class="button"
-                  type="button"
-                  onclick="showRequestForm()">
+          <button class="button" type="button" onclick="showRequestForm()">
             📩 اطلب البرنامج الآن
           </button>
 
-          <a class="button" href="#contact">
-            📞 تواصل معنا
-          </a>
-
+          <a class="button" href="#contact">📞 تواصل معنا</a>
         </div>
-
       </div>
 
       <div class="app-visual">
-
-        <img class="app-image"
-             src="ad-facebook-2.png"
-             alt="الإعلان التعريفي لتطبيق T.N.I.A Market Pro">
-
+        <img class="app-image" src="ad-facebook-2.png" alt="الإعلان التعريفي لتطبيق T.N.I.A Market Pro">
       </div>
-
     </div>
 
     <div class="app-features">
-
       <div class="feature">
         <div class="feature-icon">🏪</div>
         <h4>مناسب للمحلات</h4>
-        <p>
-          حل عملي لمساعدة أصحاب المحلات في إدارة أعمالهم.
-        </p>
+        <p>حل عملي لمساعدة أصحاب المحلات في إدارة أعمالهم.</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">📱</div>
         <h4>يعمل على Android</h4>
-        <p>
-          مصمم للاستخدام على الهواتف والأجهزة المتوافقة.
-        </p>
+        <p>مصمم للاستخدام على الهواتف والأجهزة المتوافقة.</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">🎁</div>
         <h4>تجربة مجانية</h4>
-        <p>
-          إمكانية تجربة البرنامج لمدة 3 أيام قبل التفعيل.
-        </p>
+        <p>إمكانية تجربة البرنامج لمدة 3 أيام قبل التفعيل.</p>
       </div>
-
     </div>
 
     <div class="app-note">
-
       <strong>طريقة الحصول على البرنامج:</strong>
-
       <br>
-
       أرسل طلبك من خلال النموذج الموجود أسفل هذه البطاقة.
       سيصل طلبك إلى إدارة Taha Technologies، وبعد مراجعة الطلب
       والتواصل معك والاتفاق على السعر، يتم إرسال نسخة التثبيت للعميل.
-
       <br><br>
-
       🔐 لا يوجد تحميل عام للبرنامج من الموقع.
       يتم إرسال ملف التثبيت فقط بعد الموافقة على الطلب.
-
       <br><br>
-
       🔐 الترخيص مخصص لهاتف واحد، وتغيير الهاتف يحتاج إلى رمز ترخيص جديد.
-
     </div>
 
     <div class="video-box">
-
-      <video controls
-             preload="metadata"
-             playsinline
-             poster="ad-facebook-2.png">
-
-        <source src="TNIA-tutorial-final-v2.mp4"
-                type="video/mp4">
-
+      <video controls preload="metadata" playsinline poster="ad-facebook-2.png">
+        <source src="TNIA-tutorial-final-v2.mp4" type="video/mp4">
         متصفحك لا يدعم تشغيل الفيديو.
-
       </video>
-
     </div>
 
-    <!-- نموذج طلب البرنامج -->
-
-    <div id="program-request"
-         class="request-box"
-         style="display:none;">
-
-      <h4>
-        📩 طلب T.N.I.A Market Pro
-      </h4>
+    <div id="program-request" class="request-box" style="display:none;">
+      <h4>📩 طلب T.N.I.A Market Pro</h4>
 
       <p>
         املأ البيانات التالية لإرسال طلبك.
@@ -1246,74 +444,218 @@
             action="https://formspree.io/f/mjyydvkw"
             method="POST">
 
-        <input type="hidden"
-               name="_subject"
-               value="طلب جديد لبرنامج T.N.I.A Market Pro">
+        <input type="hidden" name="_subject" value="طلب جديد لبرنامج T.N.I.A Market Pro">
+        <input type="hidden" name="request_type" value="طلب الحصول على T.N.I.A Market Pro">
 
-        <input type="hidden"
-               name="request_type"
-               value="طلب الحصول على T.N.I.A Market Pro">
+        <label for="program-name">الاسم *</label>
+        <input id="program-name" type="text" name="name" placeholder="اكتب اسمك" autocomplete="name" required>
 
-        <label for="program-name">
-          الاسم *
-        </label>
+        <label for="program-email">البريد الإلكتروني *</label>
+        <input id="program-email" type="email" name="email" placeholder="example@email.com" autocomplete="email" required>
 
-        <input id="program-name"
-               type="text"
-               name="name"
-               placeholder="اكتب اسمك"
-               autocomplete="name"
-               required>
+        <label for="program-phone">رقم الهاتف</label>
+        <input id="program-phone" type="tel" name="phone" placeholder="مثال: 0770000000" autocomplete="tel">
 
-        <label for="program-email">
-          البريد الإلكتروني *
-        </label>
+        <label for="program-message">ملاحظات أو رسالة</label>
+        <textarea id="program-message" name="message" placeholder="اكتب أي معلومات أو أسئلة تريد إضافتها..."></textarea>
 
-        <input id="program-email"
-               type="email"
-               name="email"
-               placeholder="example@email.com"
-               autocomplete="email"
-               required>
+        <button id="program-submit" class="button" type="submit">إرسال طلب البرنامج</button>
 
-        <label for="program-phone">
-          رقم الهاتف
-        </label>
-
-        <input id="program-phone"
-               type="tel"
-               name="phone"
-               placeholder="مثال: 0770000000"
-               autocomplete="tel">
-
-        <label for="program-message">
-          ملاحظات أو رسالة
-        </label>
-
-        <textarea id="program-message"
-                  name="message"
-                  placeholder="اكتب أي معلومات أو أسئلة تريد إضافتها..."></textarea>
-
-        <button id="program-submit"
-                class="button"
-                type="submit">
-          إرسال طلب البرنامج
-        </button>
-
-        <p id="program-status"
-           class="request-status"
-           role="status"
-           aria-live="polite"></p>
-
+        <p id="program-status" class="request-status" role="status" aria-live="polite"></p>
       </form>
 
-<div class="approval-note">
-  🔐 <strong>تنبيه:</strong>
-  إرسال الطلب لا يعني الحصول على البرنامج تلقائيًا.
-  تتم مراجعة كل طلب يدويًا، وبعد الموافقة والتواصل معك والاتفاق على التفاصيل،
-  يتم إرسال ملف التثبيت إلى البريد الإلكتروني الذي قدمته.
-</div>
+      <div class="approval-note">
+        🔐 <strong>تنبيه:</strong>
+        إرسال الطلب لا يعني الحصول على البرنامج تلقائيًا.
+        تتم مراجعة كل طلب يدويًا، وبعد الموافقة والتواصل معك والاتفاق على التفاصيل،
+        يتم إرسال ملف التثبيت إلى البريد الإلكتروني الذي قدمته.
+      </div>
+    </div>
+  </div>
 
+  <!-- HR Pro -->
+  <div class="app-card reveal">
+
+    <div class="app-top">
+      <div class="app-info">
+        <h3>HR Pro</h3>
+
+        <div class="app-subtitle">
+          نظام احترافي لإدارة الموارد البشرية والرواتب.
+        </div>
+
+        <p>
+          برنامج مكتبي يساعد المؤسسات وأصحاب الأعمال على تنظيم ملفات الموظفين،
+          الحضور والغياب، الرواتب، السلف، المدفوعات والتقارير من خلال واجهة عربية
+          سهلة ومنظمة.
+        </p>
+
+        <div class="app-badges">
+          <span class="app-badge">💻 Windows</span>
+          <span class="app-badge">👥 إدارة الموظفين</span>
+          <span class="app-badge">💰 الرواتب</span>
+          <span class="app-badge">📊 التقارير</span>
+        </div>
+
+        <div class="app-price">
+          💼 <strong>للاستفسار عن السعر والترخيص، أرسل طلبك</strong>
+        </div>
+
+        <div class="app-buttons">
+          <button class="button" type="button" onclick="showHrRequestForm()">
+            📩 اطلب HR Pro الآن
+          </button>
+
+          <a class="button" href="#contact">📞 تواصل معنا</a>
+        </div>
+      </div>
+
+      <div class="app-visual">
+        <img class="app-image" src="hr-pro-01.png" alt="واجهة برنامج HR Pro">
+      </div>
+    </div>
+
+    <div class="app-features">
+      <div class="feature">
+        <div class="feature-icon">👥</div>
+        <h4>إدارة الموظفين</h4>
+        <p>تنظيم بيانات وملفات الموظفين بطريقة سهلة ومنظمة.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🕐</div>
+        <h4>الحضور والغياب</h4>
+        <p>متابعة الحضور والغياب وتسجيل البيانات الخاصة بالموظفين.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h4>الرواتب والسلف</h4>
+        <p>تنظيم الرواتب والسلف والمدفوعات ومتابعة المستحقات.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h4>التقارير</h4>
+        <p>إنشاء تقارير تساعد على متابعة وإدارة بيانات المؤسسة.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⚙️</div>
+        <h4>إعدادات النظام</h4>
+        <p>إعدادات مرنة لتخصيص النظام وفق احتياجات المستخدم.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🇩🇿</div>
+        <h4>واجهة عربية</h4>
+        <p>واجهة واضحة ومناسبة للمستخدم العربي.</p>
+      </div>
+    </div>
+
+    <div class="hr-gallery">
+      <figure>
+        <img src="hr-pro-01.png" alt="HR Pro - الشاشة الرئيسية" loading="lazy">
+        <figcaption>واجهة البرنامج</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-02.png" alt="HR Pro - الموظفون" loading="lazy">
+        <figcaption>إدارة الموظفين</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-03.png" alt="HR Pro - الحضور والغياب" loading="lazy">
+        <figcaption>الحضور والغياب</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-04.png" alt="HR Pro - الرواتب" loading="lazy">
+        <figcaption>الرواتب</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-05.png" alt="HR Pro - السلف والمدفوعات" loading="lazy">
+        <figcaption>السلف والمدفوعات</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-06.png" alt="HR Pro - التقارير" loading="lazy">
+        <figcaption>التقارير</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-07.png" alt="HR Pro - الإعدادات" loading="lazy">
+        <figcaption>الإعدادات</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-08.png" alt="HR Pro - واجهة النظام" loading="lazy">
+        <figcaption>واجهة النظام</figcaption>
+      </figure>
+
+      <figure>
+        <img src="hr-pro-09.png" alt="HR Pro - شاشة إضافية" loading="lazy">
+        <figcaption>من داخل النظام</figcaption>
+      </figure>
+    </div>
+
+    <div class="app-note">
+      <strong>طريقة الحصول على HR Pro:</strong>
+      <br>
+      أرسل طلبك من خلال النموذج الموجود أسفل هذه البطاقة.
+      تتم مراجعة الطلب والتواصل معك لتوضيح تفاصيل البرنامج والسعر وطريقة الحصول عليه.
+      <br><br>
+      🔐 لا يوجد تحميل عام للبرنامج من الموقع.
+      يتم إرسال نسخة البرنامج فقط بعد الموافقة على الطلب والاتفاق مع العميل.
+    </div>
+
+    <div class="video-box">
+      <video controls preload="metadata" playsinline poster="hr-pro-01.png">
+        <source src="hr-pro-tutorial.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+
+    <div id="hr-program-request" class="request-box" style="display:none;">
+      <h4>📩 طلب برنامج HR Pro</h4>
+
+      <p>
+        املأ البيانات التالية لإرسال طلبك.
+        سنراجع الطلب ونتواصل معك عبر البريد أو الهاتف.
+      </p>
+
+      <form id="hr-program-request-form"
+            class="request-form"
+            action="https://formspree.io/f/mjyydvkw"
+            method="POST">
+
+        <input type="hidden" name="_subject" value="طلب جديد لبرنامج HR Pro">
+        <input type="hidden" name="request_type" value="طلب الحصول على HR Pro">
+
+        <label for="hr-name">الاسم *</label>
+        <input id="hr-name" type="text" name="name" placeholder="اكتب اسمك" autocomplete="name" required>
+
+        <label for="hr-email">البريد الإلكتروني *</label>
+        <input id="hr-email" type="email" name="email" placeholder="example@email.com" autocomplete="email" required>
+
+        <label for="hr-phone">رقم الهاتف</label>
+        <input id="hr-phone" type="tel" name="phone" placeholder="مثال: 0770000000" autocomplete="tel">
+
+        <label for="hr-message">ملاحظات أو رسالة</label>
+        <textarea id="hr-message" name="message" placeholder="اكتب أي معلومات أو أسئلة تريد إضافتها..."></textarea>
+
+        <button id="hr-program-submit" class="button" type="submit">إرسال طلب HR Pro</button>
+
+        <p id="hr-program-status" class="request-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="approval-note">
+        🔐 <strong>تنبيه:</strong>
+        إرسال الطلب لا يعني الحصول على البرنامج تلقائيًا.
+        تتم مراجعة كل طلب يدويًا، وبعد الموافقة والتواصل معك والاتفاق على التفاصيل،
+        يتم إرسال البرنامج أو تعليمات الحصول عليه إلى العميل.
+      </div>
     </div>
 
   </div>
@@ -1321,396 +663,223 @@
 </section>
 
 <section id="testimonials" class="testimonials">
-
   <h2>آراء العملاء</h2>
-
   <p>
     نطمح دائمًا إلى تقديم تجربة رقمية مميزة وبناء علاقات طويلة الأمد مع عملائنا.
   </p>
 
   <div class="testimonials-grid">
-
     <div class="testimonial-card reveal">
-
       <div class="quote">“</div>
-
       <h3>عميلنا القادم</h3>
-
-      <p>
-        نسعى لتقديم حلول تقنية احترافية تساعد العملاء على تحقيق أهدافهم الرقمية.
-      </p>
-
+      <p>نسعى لتقديم حلول تقنية احترافية تساعد العملاء على تحقيق أهدافهم الرقمية.</p>
     </div>
 
     <div class="testimonial-card reveal">
-
       <div class="quote">“</div>
-
       <h3>تجربة العميل</h3>
-
-      <p>
-        رضا العميل وجودة العمل هما من أهم أولويات Taha Technologies.
-      </p>
-
+      <p>رضا العميل وجودة العمل هما من أهم أولويات Taha Technologies.</p>
     </div>
 
     <div class="testimonial-card reveal">
-
       <div class="quote">“</div>
-
       <h3>رؤيتنا</h3>
-
-      <p>
-        نبني تقنيات تكنولوجية مبتكرة وحلولًا رقمية بسيطة وعصرية وقابلة للتطوير مع نمو المشروع.
-      </p>
-
+      <p>نبني تقنيات تكنولوجية مبتكرة وحلولًا رقمية بسيطة وعصرية وقابلة للتطوير مع نمو المشروع.</p>
     </div>
-
   </div>
-
 </section>
 
 <section id="contact" class="contact">
-
   <h2>تواصل معنا</h2>
-
-  <p>
-    لديك فكرة أو مشروع؟ اكتب لنا رسالتك وسنعمل على مساعدتك.
-  </p>
+  <p>لديك فكرة أو مشروع؟ اكتب لنا رسالتك وسنعمل على مساعدتك.</p>
 
   <form id="contact-form"
         class="contact-form"
         action="https://formspree.io/f/mjyydvkw"
         method="POST">
 
-    <input type="hidden"
-           name="_subject"
-           value="رسالة جديدة من موقع Taha Technologies Algeria">
+    <input type="hidden" name="_subject" value="رسالة جديدة من موقع Taha Technologies Algeria">
 
-    <label for="visitor-name">
-      الاسم
-    </label>
+    <label for="visitor-name">الاسم</label>
+    <input id="visitor-name" type="text" name="name" placeholder="اكتب اسمك" autocomplete="name" required>
 
-    <input id="visitor-name"
-           type="text"
-           name="name"
-           placeholder="اكتب اسمك"
-           autocomplete="name"
-           required>
+    <label for="visitor-email">البريد الإلكتروني</label>
+    <input id="visitor-email" type="email" name="email" placeholder="example@email.com" autocomplete="email" required>
 
-    <label for="visitor-email">
-      البريد الإلكتروني
-    </label>
+    <label for="visitor-message">الرسالة</label>
+    <textarea id="visitor-message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
 
-    <input id="visitor-email"
-           type="email"
-           name="email"
-           placeholder="example@email.com"
-           autocomplete="email"
-           required>
-
-    <label for="visitor-message">
-      الرسالة
-    </label>
-
-    <textarea id="visitor-message"
-              name="message"
-              placeholder="اكتب رسالتك هنا..."
-              required></textarea>
-
-    <button id="submit-button"
-            class="button"
-            type="submit">
-      إرسال الرسالة
-    </button>
-
-    <p id="form-status"
-       role="status"
-       aria-live="polite"></p>
-
+    <button id="submit-button" class="button" type="submit">إرسال الرسالة</button>
+    <p id="form-status" role="status" aria-live="polite"></p>
   </form>
 
   <div class="contact-buttons">
+    <a class="button" href="mailto:tahac1836@gmail.com">📧 راسلنا عبر البريد</a>
 
-    <a class="button"
-       href="mailto:tahac1836@gmail.com">
-      📧 راسلنا عبر البريد
-    </a>
-
-    <button class="button whatsapp-button"
-            type="button"
-            onclick="showWhatsAppMessage()">
+    <button class="button whatsapp-button" type="button" onclick="showWhatsAppMessage()">
       💬 واتساب
     </button>
-
   </div>
-
 </section>
 
 </main>
 
 <footer>
-
-  <p>
-    © 2026 Taha Technologies Algeria — جميع الحقوق محفوظة
-  </p>
-
-  <p>
-    تقنيات تكنولوجية مبتكرة 🇩🇿
-  </p>
-
-  <p>
-    <a href="mailto:tahac1836@gmail.com">
-      تواصل معنا
-    </a>
-  </p>
-
+  <p>© 2026 Taha Technologies Algeria — جميع الحقوق محفوظة</p>
+  <p>تقنيات تكنولوجية مبتكرة 🇩🇿</p>
+  <p><a href="mailto:tahac1836@gmail.com">تواصل معنا</a></p>
 </footer>
 
-<button id="back-to-top"
-        type="button"
-        aria-label="العودة إلى الأعلى"
-        title="العودة إلى الأعلى">
-  ↑
-</button>
+<button id="back-to-top" type="button" aria-label="العودة إلى الأعلى" title="العودة إلى الأعلى">↑</button>
 
 <script>
-
 document.documentElement.classList.add("js");
 
 function showWhatsAppMessage(){
-
-  alert(
-    "واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com"
-  );
-
+  alert("واتساب غير متوفر الآن، يرجى التواصل عبر البريد الإلكتروني: tahac1836@gmail.com");
 }
-
-/* إظهار نموذج طلب البرنامج */
 
 function showRequestForm(){
-
-  const formBox =
-    document.getElementById("program-request");
-
+  const formBox = document.getElementById("program-request");
   formBox.style.display = "block";
-
-  formBox.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
-  });
-
+  formBox.scrollIntoView({behavior:"smooth", block:"center"});
 }
 
-/* زر العودة إلى الأعلى */
+function showHrRequestForm(){
+  const formBox = document.getElementById("hr-program-request");
+  formBox.style.display = "block";
+  formBox.scrollIntoView({behavior:"smooth", block:"center"});
+}
 
-const backToTopButton =
-  document.getElementById("back-to-top");
+const backToTopButton = document.getElementById("back-to-top");
 
-window.addEventListener(
-  "scroll",
-  function(){
+window.addEventListener("scroll", function(){
+  backToTopButton.style.display = window.scrollY > 400 ? "block" : "none";
+}, {passive:true});
 
-    backToTopButton.style.display =
-      window.scrollY > 400 ? "block" : "none";
+backToTopButton.addEventListener("click", function(){
+  window.scrollTo({top:0, behavior:"smooth"});
+});
 
-  },
-  {passive:true}
-);
-
-backToTopButton.addEventListener(
-  "click",
-  function(){
-
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
-
-  }
-);
-
-/* الحركات */
-
-const revealElements =
-  document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal");
 
 if("IntersectionObserver" in window){
+  const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
 
-  const revealObserver =
-    new IntersectionObserver(
-      function(entries){
-
-        entries.forEach(function(entry){
-
-          if(entry.isIntersecting){
-
-            entry.target.classList.add("visible");
-
-            revealObserver.unobserve(entry.target);
-
-          }
-
-        });
-
-      },
-      {threshold:0.12}
-    );
-
-  revealElements.forEach(
-    function(element){
-      revealObserver.observe(element);
-    }
-  );
-
+  revealElements.forEach(function(element){
+    revealObserver.observe(element);
+  });
 }else{
-
-  revealElements.forEach(
-    function(element){
-      element.classList.add("visible");
-    }
-  );
-
+  revealElements.forEach(function(element){
+    element.classList.add("visible");
+  });
 }
 
 /* نموذج التواصل العام */
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+const submitButton = document.getElementById("submit-button");
 
-const contactForm =
-  document.getElementById("contact-form");
+contactForm.addEventListener("submit", async function(event){
+  event.preventDefault();
 
-const formStatus =
-  document.getElementById("form-status");
+  submitButton.disabled = true;
+  submitButton.textContent = "جارٍ الإرسال...";
+  formStatus.textContent = "";
 
-const submitButton =
-  document.getElementById("submit-button");
+  try{
+    const response = await fetch(contactForm.action, {
+      method:"POST",
+      body:new FormData(contactForm),
+      headers:{"Accept":"application/json"}
+    });
 
-contactForm.addEventListener(
-  "submit",
-  async function(event){
-
-    event.preventDefault();
-
-    submitButton.disabled = true;
-
-    submitButton.textContent =
-      "جارٍ الإرسال...";
-
-    formStatus.textContent = "";
-
-    try{
-
-      const response =
-        await fetch(
-          contactForm.action,
-          {
-            method:"POST",
-            body:new FormData(contactForm),
-            headers:{
-              "Accept":"application/json"
-            }
-          }
-        );
-
-      if(response.ok){
-
-        formStatus.textContent =
-          "تم إرسال رسالتك بنجاح ✅ شكرًا لتواصلك معنا، سنراجع رسالتك ونرد عليك في أقرب وقت.";
-
-        contactForm.reset();
-
-      }else{
-
-        formStatus.textContent =
-          "تعذر إرسال الرسالة. تحقق من إعدادات Formspree وحاول مرة أخرى.";
-
-      }
-
-    }catch(error){
-
-      formStatus.textContent =
-        "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
-
-    }finally{
-
-      submitButton.disabled = false;
-
-      submitButton.textContent =
-        "إرسال الرسالة";
-
+    if(response.ok){
+      formStatus.textContent = "تم إرسال رسالتك بنجاح ✅ شكرًا لتواصلك معنا، سنراجع رسالتك ونرد عليك في أقرب وقت.";
+      contactForm.reset();
+    }else{
+      formStatus.textContent = "تعذر إرسال الرسالة. تحقق من إعدادات Formspree وحاول مرة أخرى.";
     }
-
+  }catch(error){
+    formStatus.textContent = "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
+  }finally{
+    submitButton.disabled = false;
+    submitButton.textContent = "إرسال الرسالة";
   }
-);
+});
 
 /* نموذج طلب T.N.I.A Market Pro */
+const programRequestForm = document.getElementById("program-request-form");
+const programStatus = document.getElementById("program-status");
+const programSubmit = document.getElementById("program-submit");
 
-const programRequestForm =
-  document.getElementById("program-request-form");
+programRequestForm.addEventListener("submit", async function(event){
+  event.preventDefault();
 
-const programStatus =
-  document.getElementById("program-status");
+  programSubmit.disabled = true;
+  programSubmit.textContent = "جارٍ إرسال الطلب...";
+  programStatus.textContent = "";
 
-const programSubmit =
-  document.getElementById("program-submit");
+  try{
+    const response = await fetch(programRequestForm.action, {
+      method:"POST",
+      body:new FormData(programRequestForm),
+      headers:{"Accept":"application/json"}
+    });
 
-programRequestForm.addEventListener(
-  "submit",
-  async function(event){
-
-    event.preventDefault();
-
-    programSubmit.disabled = true;
-
-    programSubmit.textContent =
-      "جارٍ إرسال الطلب...";
-
-    programStatus.textContent = "";
-
-    try{
-
-      const response =
-        await fetch(
-          programRequestForm.action,
-          {
-            method:"POST",
-            body:new FormData(programRequestForm),
-            headers:{
-              "Accept":"application/json"
-            }
-          }
-        );
-
-      if(response.ok){
-
-        programStatus.textContent =
-          "تم إرسال طلبك بنجاح ✅ سنراجع الطلب ونتواصل معك عبر البريد أو الهاتف.";
-
-        programRequestForm.reset();
-
-      }else{
-
-        programStatus.textContent =
-          "تعذر إرسال الطلب. يرجى المحاولة مرة أخرى.";
-
-      }
-
-    }catch(error){
-
-      programStatus.textContent =
-        "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
-
-    }finally{
-
-      programSubmit.disabled = false;
-
-      programSubmit.textContent =
-        "إرسال طلب البرنامج";
-
+    if(response.ok){
+      programStatus.textContent = "تم إرسال طلبك بنجاح ✅ سنراجع الطلب ونتواصل معك عبر البريد أو الهاتف.";
+      programRequestForm.reset();
+    }else{
+      programStatus.textContent = "تعذر إرسال الطلب. يرجى المحاولة مرة أخرى.";
     }
-
+  }catch(error){
+    programStatus.textContent = "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
+  }finally{
+    programSubmit.disabled = false;
+    programSubmit.textContent = "إرسال طلب البرنامج";
   }
-);
+});
 
+/* نموذج طلب HR Pro */
+const hrProgramRequestForm = document.getElementById("hr-program-request-form");
+const hrProgramStatus = document.getElementById("hr-program-status");
+const hrProgramSubmit = document.getElementById("hr-program-submit");
+
+hrProgramRequestForm.addEventListener("submit", async function(event){
+  event.preventDefault();
+
+  hrProgramSubmit.disabled = true;
+  hrProgramSubmit.textContent = "جارٍ إرسال الطلب...";
+  hrProgramStatus.textContent = "";
+
+  try{
+    const response = await fetch(hrProgramRequestForm.action, {
+      method:"POST",
+      body:new FormData(hrProgramRequestForm),
+      headers:{"Accept":"application/json"}
+    });
+
+    if(response.ok){
+      hrProgramStatus.textContent = "تم إرسال طلب HR Pro بنجاح ✅ سنراجع الطلب ونتواصل معك.";
+      hrProgramRequestForm.reset();
+    }else{
+      hrProgramStatus.textContent = "تعذر إرسال الطلب. يرجى المحاولة مرة أخرى.";
+    }
+  }catch(error){
+    hrProgramStatus.textContent = "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
+  }finally{
+    hrProgramSubmit.disabled = false;
+    hrProgramSubmit.textContent = "إرسال طلب HR Pro";
+  }
+});
 </script>
 
 </body>
