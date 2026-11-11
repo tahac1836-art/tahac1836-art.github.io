@@ -46,6 +46,16 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-2WQ5KBFS93');
+
+    // تسجيل نجاح إرسال النماذج فقط، دون إرسال بيانات شخصية إلى Google Analytics.
+    function trackSuccessfulForm(eventName, formName){
+      if (typeof window.gtag === 'function'){
+        window.gtag('event', eventName, {
+          form_name: formName,
+          form_id: eventName
+        });
+      }
+    }
   </script>
 
   <style>
@@ -802,6 +812,7 @@ contactForm.addEventListener("submit", async function(event){
     });
 
     if(response.ok){
+      trackSuccessfulForm("contact_message_success", "نموذج التواصل");
       formStatus.textContent = "تم إرسال رسالتك بنجاح ✅ شكرًا لتواصلك معنا، سنراجع رسالتك ونرد عليك في أقرب وقت.";
       contactForm.reset();
     }else{
@@ -835,6 +846,7 @@ programRequestForm.addEventListener("submit", async function(event){
     });
 
     if(response.ok){
+      trackSuccessfulForm("tnia_request_success", "طلب T.N.I.A Market Pro");
       programStatus.textContent = "تم إرسال طلبك بنجاح ✅ سنراجع الطلب ونتواصل معك عبر البريد أو الهاتف.";
       programRequestForm.reset();
     }else{
@@ -868,6 +880,7 @@ hrProgramRequestForm.addEventListener("submit", async function(event){
     });
 
     if(response.ok){
+      trackSuccessfulForm("hr_pro_request_success", "طلب HR Pro");
       hrProgramStatus.textContent = "تم إرسال طلب HR Pro بنجاح ✅ سنراجع الطلب ونتواصل معك.";
       hrProgramRequestForm.reset();
     }else{
